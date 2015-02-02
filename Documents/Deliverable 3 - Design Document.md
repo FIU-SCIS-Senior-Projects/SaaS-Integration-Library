@@ -17,6 +17,9 @@
 ###2.4 Persistent Data Management
 ![Data Management](images/DataManagement.jpg?raw=true)
 ###2.5 Security/Privacy
+Django comes with great security features available out of the box. This includes cross site scripting protection, cross site request forgery protection, SQL injection protection, session security, and others.
+
+In terms of privacy, on a basic level the project will have only one user that has access to create data sources. The authentication is done by third party APIs, so that privacy is outside the system. Access to the database will be restricted to the single user.
 
 ##3. Detailed Design
 
