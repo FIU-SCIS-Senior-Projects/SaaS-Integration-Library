@@ -55,7 +55,7 @@
 **Summary of discussion:** Discussed use cases pertaining to SaaS Integration Library, particularly Trello data source retrieval by means of authentication and API calls.
 
 **Assigned tasks:** Adam - Research Trello API, begin working on documentation and Mingle set up
-~~~~
+____
 
 
 **Diary Entry** - January 29 2014
