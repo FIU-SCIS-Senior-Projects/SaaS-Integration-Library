@@ -1,16 +1,22 @@
+#Deliverable 3 - Design Document
+###Senior Project CIS 4911
+###SaaS Integration Library
+###Adam Merille
+###Masoud Sadjadi
+
 ##1. Introduction
 
 ##2. System Design
 
-###*Overview
+###2.1 Overview
 
-###*Subsystem Decomposition
+###2.2 Subsystem Decomposition
 
-###*Hardware and Software Mapping
+###2.3 Hardware and Software Mapping
 
-###*Persistent Data Management
+###2.4 Persistent Data Management
 
-###*Security/Privacy
+###2.5 Security/Privacy
 
 ##3. Detailed Design
 
