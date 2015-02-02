@@ -8,15 +8,15 @@
 
 ##2. System Design
 
-	###2.1 Overview
+###2.1 Overview
 
-	###2.2 Subsystem Decomposition
+###2.2 Subsystem Decomposition
 
-	###2.3 Hardware and Software Mapping
+###2.3 Hardware and Software Mapping
 
-	###2.4 Persistent Data Management
+###2.4 Persistent Data Management
 
-	###2.5 Security/Privacy
+###2.5 Security/Privacy
 
 ##3. Detailed Design
 
