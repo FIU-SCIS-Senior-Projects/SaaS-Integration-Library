@@ -30,6 +30,17 @@
 
 ###6.1 Appendix A - Complete Use Cases	
 
+**Title:**
+
+**Description:** 
+
+**Actor:**
+
+**Preconditions:**
+
+**Postconditions:**
+
+
 ###6.2 Appendix B - Use Case Diagrams
 
 ###6.3 Appendix C - Static UML Diagrams

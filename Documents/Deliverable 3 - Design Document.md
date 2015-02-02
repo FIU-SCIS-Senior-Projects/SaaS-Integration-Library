@@ -23,5 +23,12 @@
 ##4. Glossary
 
 ##5. Appendix
+###5.1 Appendix A - Use Case Diagram
+
+###5.2 Appendix B - Use Cases
+
+###5.3 Appendix C - Class Interfaces (code)
+
+###5.4 Appendix D - Diary of Meetings and Tasks
 
 ##6. References
