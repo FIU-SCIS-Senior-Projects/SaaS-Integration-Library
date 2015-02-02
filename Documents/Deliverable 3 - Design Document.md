@@ -1,8 +1,8 @@
 #Deliverable 3 - Design Document
-###Senior Project CIS 4911
-###SaaS Integration Library
-###Adam Merille
-###Masoud Sadjadi
+#####Senior Project CIS 4911
+#####SaaS Integration Library
+#####Adam Merille
+#####Professor Masoud Sadjadi
 
 ##1. Introduction
 
