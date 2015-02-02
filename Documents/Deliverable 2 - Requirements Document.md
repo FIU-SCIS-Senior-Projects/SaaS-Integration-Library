@@ -19,7 +19,7 @@
 ####4.2.1 Scenarios
 
 ####4.2.2 Use Case Model
-
+![Image of Use Case Diagram](https://github.com/FIU-SCIS-Senior-Project-2015-Spring/SaaS-Integration-Library/tree/develop/Documents/images/UseCaseDiagram.jpg)
 ####4.2.3 Static Model
 
 ####4.2.4 Dynamic Model
@@ -41,7 +41,7 @@
 **Postconditions:**
 
 
-###6.2 Appendix B - Use Case Diagrams
+###6.2 Appendix B - Use Case Diagram
 
 ###6.3 Appendix C - Static UML Diagrams
 
