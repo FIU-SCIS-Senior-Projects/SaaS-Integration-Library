@@ -19,7 +19,7 @@
 ####4.2.1 Scenarios
 
 ####4.2.2 Use Case Model
-![Image of Use Case Diagram](https://github.com/FIU-SCIS-Senior-Project-2015-Spring/SaaS-Integration-Library/tree/develop/Documents/images/UseCaseDiagram.jpg?raw=true)
+![Image of Use Case Diagram](images/UseCaseDiagram.jpg?raw=true)
 ####4.2.3 Static Model
 
 ####4.2.4 Dynamic Model
