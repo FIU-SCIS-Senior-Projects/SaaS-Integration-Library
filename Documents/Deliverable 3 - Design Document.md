@@ -11,11 +11,11 @@
 ###2.1 Overview
 
 ###2.2 Subsystem Decomposition
-
+![Subsystem Decomposition](images/SubsystemOverview?raw=true)
 ###2.3 Hardware and Software Mapping
 
 ###2.4 Persistent Data Management
-
+![Data Management](images/DataManagement.jpg?raw=true)
 ###2.5 Security/Privacy
 
 ##3. Detailed Design
