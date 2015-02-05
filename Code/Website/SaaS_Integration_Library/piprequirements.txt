@@ -34,6 +34,7 @@ six==1.5.2
 software-center-aptd-plugins==0.0.0
 ssh-import-id==3.21
 system-service==0.1.6
+trello==0.9.1
 Twisted-Core==13.2.0
 Twisted-Web==13.2.0
 unity-lens-photos==1.0
