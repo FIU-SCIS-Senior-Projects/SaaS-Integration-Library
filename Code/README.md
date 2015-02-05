@@ -13,3 +13,11 @@ Description:	Ubuntu 14.04.1 LTS
 Release:	14.04
 
 Codename:	trusty
+
+
+####Database on VM
+postgresql
+
+user: siladmin
+
+password: sildata
