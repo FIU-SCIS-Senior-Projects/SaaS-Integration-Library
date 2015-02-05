@@ -15,7 +15,7 @@ Release:	14.04
 Codename:	trusty
 
 
-####Database on VM
+####Database on VM:
 postgresql
 
 user: siladmin
