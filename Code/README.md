@@ -16,6 +16,15 @@ Codename:	trusty
 
 
 ####Database on VM:
+sqlite3
+
+username: siladmin
+
+email: ameri012@fiu.edu
+
+password: sildata
+
+---
 postgresql
 
 user: siladmin
