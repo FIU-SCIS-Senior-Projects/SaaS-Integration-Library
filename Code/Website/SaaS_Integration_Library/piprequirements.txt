@@ -41,4 +41,4 @@ unity-lens-photos==1.0
 urllib3==1.7.1
 xdiagnose===3.6.3build2
 zope.interface==4.0.5
-
+jsonfield==1.0.2
