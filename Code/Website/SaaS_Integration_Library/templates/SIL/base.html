@@ -26,22 +26,21 @@
                    <a class="brand" href="/SIL/">SaaS Integration Library</a>
 
                    <div class="nav-collapse collapse">
-                       <!---<ul class="nav pull-right">
+                       <ul class="nav pull-right">
                            {% if user.is_authenticated %}
-                            <li class="navbar-text">Welcome, {{ user.username }}!</li>
-                            <li><a href="/rango/logout/">Logout</a></li>
+                       <!--<li class="navbar-text">Welcome, {{ user.username }}!</li>
+                            <li><a href="/SIL/logout/">Logout</a></li>-->
                            {% else %}
-                            <li><a href="/rango/register/">Register</a></li>
-                            <li><a href="/rango/login/">Login</a></li>
+                            <!--<li><a href="/SIL/register/">Register</a></li>-->
+                            <li><a href="/SIL/login/">Login</a></li>
                            {% endif %}
                        </ul>
                        <ul class="nav">
                            {% if user.is_authenticated %}
-                            <li><a href="/rango/restricted/">Restricted</a></li>
-                            <li><a href="/rango/add_category/">Add Category</a></li>
+                            <!--<li><a href="/SIL/restricted/">Restricted</a></li>-->
                            {% endif %}
-                           <li><a href="/rango/about/">About</a></li>
-                       </ul>--->
+                           <li><a href="/SIL/about/">About</a></li>
+                       </ul>
                    </div>
                    <!--/.nav-collapse -->
                </div>
