@@ -1,17 +1,19 @@
-<!DOCTYPE html>
+{% extends 'SIL/base.html %}
 
 {% load static %}
 
-<html>
+{% block title %}{{Index}}{% endblock %}
+
+<!---<html>
 	<head>
         <img src="{% static "brightgaugelogo.png"%}" alt="BrightGauge Logo"/>
 		<title>SaaS Integration Library</title>
-	<head>
-
-	<body>
+	<head>--->
+    {% block body_block %}
+    <div class="hero-unit">
 		<h1>SaaS Integration Library </h1>
 		Welcome!
 		<br>
 		{{mainmessage}}
-	</body>
-</html>
+    </div>
+	{% endblock %}

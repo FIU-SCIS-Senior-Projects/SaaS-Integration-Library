@@ -12,7 +12,7 @@ class User(models.Model):
 
 class Api_Credential(models.Model):
     name = models.CharField(max_length=128)
-    settings = JSONField()
+    settings = JSONField(default={})
 
-    def __unicode__(self):
-        return self.name, self.settings
+    #def __unicode__(self):
+        #return self.name, self.settings

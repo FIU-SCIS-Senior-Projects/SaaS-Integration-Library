@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import trello
-
-=======
 #from trello import TrelloApi
 import requests
 
@@ -46,4 +42,4 @@ class Trello(object):
             self.cards[board['id']] = resp.json()
 
         return self.cards
->>>>>>> task-121
+
