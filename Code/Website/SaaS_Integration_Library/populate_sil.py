@@ -6,8 +6,7 @@ def populate():
                  settings={'key': '36fb61b8a99b93c4cbf0b63a5f440503',
                            'token': '36b68eef1b52420e5731962cdb0bef1e8f152874b10f6036ed30bd9f117dc2fe'})
 
-    add_api(credentials= trello_cred,name="Trello", calls={'get_all_boards', 'get_all_cards', 'get_members', 'get_lists', 'get_labels'})
-
+    add_api(credentials= trello_cred,name="trello", calls={'get_all_boards', 'get_all_cards', 'get_members', 'get_lists', 'get_labels'})
 
 def add_api_cred(name, settings):
     p = ApiCredential.objects.get_or_create(name=name, settings=settings)[0]

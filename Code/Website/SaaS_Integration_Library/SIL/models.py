@@ -13,6 +13,9 @@ class ApiCredential(models.Model):
     name = models.CharField(max_length=128)
     settings = JSONField(default={})
 
+    #def __unicode__(self):
+        #return self.name, self.settings
+
 class Api(models.Model):
     credentials = models.ForeignKey(ApiCredential)
     name = models.CharField(max_length=128)
@@ -21,6 +24,3 @@ class Api(models.Model):
     def __unicode__(self):
         return self.name
 
-
-    #def __unicode__(self):
-        #return self.name, self.settings

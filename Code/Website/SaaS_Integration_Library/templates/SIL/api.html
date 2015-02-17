@@ -1,0 +1,21 @@
+{% extends 'SIL/base.html' %}
+
+{% load static %}
+
+{% block title %}{{ api_name }}{% endblock %}
+
+{% block body_block %}
+    <div class="hero-unit">
+        <h2>{{ api_name }}</h2>
+        <br>
+        {% if api %}
+        <ul>
+            {% for call in calls %}
+             <li>{{ call }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+            The specified API {{ api_name }} does not exist!
+        {% endif %}
+    </div>
+{% endblock %}
