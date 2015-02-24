@@ -9,12 +9,14 @@ class User(models.Model):
     def __unicode__(self):
         return self.user.username
 
+
 class ApiCredential(models.Model):
     name = models.CharField(max_length=128)
     settings = JSONField(default={})
 
     #def __unicode__(self):
-        #return self.name, self.settings
+    #return self.name, self.settings
+
 
 class Api(models.Model):
     credentials = models.ForeignKey(ApiCredential)
@@ -24,3 +26,11 @@ class Api(models.Model):
     def __unicode__(self):
         return self.name
 
+
+class Call(models.Model):
+    api = models.ForeignKey(Api)
+    name = models.CharField(max_length=128)
+    response = JSONField(default={})
+
+    def __unicode__(self):
+        return self.name

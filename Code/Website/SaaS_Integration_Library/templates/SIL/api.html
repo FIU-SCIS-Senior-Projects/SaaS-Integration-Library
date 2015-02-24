@@ -6,16 +6,24 @@
 
 {% block body_block %}
     <div class="hero-unit">
-        <h2>{{ api_name }}</h2>
-        <br>
         {% if api %}
+        <h2>{{ api_name }} Calls</h2>
+        <br>
+
         <ul>
-            {% for call in calls %}
-             <li>{{ call }}</li>
+            {% for key,value in calls.items %}
+             <li><a href="{{ context }}{{ key }}">{{ value }}</a></li>
             {% endfor %}
         </ul>
         {% else %}
+            <h2>Oops... API Error</h2>
+            <br>
             The specified API {{ api_name }} does not exist!
+            <br>
+            <h4>Possible Reasons:</h4>
+            <ul>
+                <li>The Api is misspelled or not created yet </li>
+                <li>Something somewhere is down</li>
         {% endif %}
     </div>
 {% endblock %}

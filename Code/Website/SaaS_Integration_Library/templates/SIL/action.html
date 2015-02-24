@@ -1,0 +1,26 @@
+{% extends 'SIL/base.html' %}
+
+{% block title %}{{ action }}{% endblock %}
+
+{% block body_block %}
+    <div class="hero-unit">
+        {% if action %}
+        <h2>{{ action}}</h2>
+        {% else %}
+            <h2>Oops... Call Error</h2>
+        {% endif %}
+        <br>
+        {% if call %}
+            {{ response }}
+        {% else %}
+            The specified call {{ action }} did not return anything!
+            <br>
+            <h4>Possible Reasons:</h4>
+            <ul>
+                <li>The Api is misspelled or not created yet </li>
+                <li>The Call returned an error or is not yet set up</li>
+                <li>Something somewhere is down</li>
+            </ul>
+        {% endif %}
+    </div>
+{% endblock %}
