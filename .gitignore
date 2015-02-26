@@ -37,3 +37,6 @@ nosetests.xml
 
 *.swp
 *.swo
+
+# Pycharm IDE
+.idea/
