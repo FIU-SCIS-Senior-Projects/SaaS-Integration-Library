@@ -11,6 +11,16 @@ def index(request):
     context_dict = {'mainmessage': "Explore Third Party APIs!"}
     return render_to_response('SIL/index.html', context_dict, context)
 
+def datasets(request):
+    context = RequestContext(request)
+
+    context_dict = {}
+    # try:
+    #
+    # except AttributeError:
+    #     pass
+
+    return render_to_response('SIL/datasets.html', context_dict, context)
 
 def api(request, api_name):
     context = RequestContext(request)
