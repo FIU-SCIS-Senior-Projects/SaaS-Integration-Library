@@ -1,13 +1,13 @@
 from django.db import models
 from jsonfield import JSONField
-from django.contrib.auth.models import User
+#from django.contrib.auth.models import User
 
 
-class User(models.Model):
-    user = models.OneToOneField(User)
-
-    def __unicode__(self):
-        return self.user.username
+#class User(models.Model):
+#    user = models.OneToOneField(User)
+#
+#    def __unicode__(self):
+#        return self.user.username
 
 
 class ApiCredential(models.Model):

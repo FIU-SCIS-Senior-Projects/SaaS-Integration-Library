@@ -5,7 +5,7 @@ from django.shortcuts import render_to_response
 import simplejson
 
 from apis import trello
-from SIL.models import User, ApiCredential, Api, Call
+from SIL.models import ApiCredential, Api, Call
 
 
 def index(request):

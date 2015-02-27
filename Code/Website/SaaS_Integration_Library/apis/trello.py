@@ -1,7 +1,7 @@
 #from trello import TrelloApi
 import requests
 import json
-from django.utils import simplejson
+import simplejson
 import pprint
 
 #Developer API Key = 36fb61b8a99b93c4cbf0b63a5f440503
