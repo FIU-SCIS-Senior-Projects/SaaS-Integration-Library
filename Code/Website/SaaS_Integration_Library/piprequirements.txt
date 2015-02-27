@@ -3,3 +3,4 @@ jsonfield==1.0.2
 requests==2.2.1
 simplejson==3.6.5
 wsgiref==0.1.2
+mock==1.0.1
