@@ -26,7 +26,7 @@
       <file leaf-file-name="trello.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Website/SaaS_Integration_Library/apis/trello.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="33" selection-start="1296" selection-end="1296" vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="825">
+            <state line="43" column="25" selection-start="1471" selection-end="1471" vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="765">
               <folding />
             </state>
           </provider>
@@ -35,16 +35,16 @@
       <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Website/SaaS_Integration_Library/SaaS_Integration_Library/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="136" column="30" selection-start="4751" selection-end="4751" vertical-scroll-proportion="0.0" vertical-offset="1824" max-vertical-offset="2715">
+            <state line="136" column="30" selection-start="4751" selection-end="4751" vertical-scroll-proportion="0.0" vertical-offset="2040" max-vertical-offset="2715">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Website/SaaS_Integration_Library/SIL/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="360">
+            <state line="18" column="0" selection-start="421" selection-end="421" vertical-scroll-proportion="0.25751072" vertical-offset="0" max-vertical-offset="932">
               <folding />
             </state>
           </provider>
@@ -59,10 +59,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Website/SaaS_Integration_Library/SIL/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="353" selection-end="353" vertical-scroll-proportion="0.1659292" vertical-offset="0" max-vertical-offset="904">
+            <state line="10" column="0" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="975">
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -110,9 +110,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="75" />
-    <option name="y" value="52" />
-    <option name="width" value="1067" />
-    <option name="height" value="1028" />
+    <option name="y" value="24" />
+    <option name="width" value="1047" />
+    <option name="height" value="1084" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -128,9 +128,9 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
-      <showMembers />
+      <showMembers ProjectPane="true" />
       <showModules />
       <showLibraryContents />
       <hideEmptyPackages />
@@ -140,9 +140,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files" />
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -153,6 +150,10 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Project Files" />
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -161,7 +162,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Website/SaaS_Integration_Library" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Website" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -324,16 +325,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="75" y="52" width="1067" height="1028" extended-state="0" />
+    <frame x="75" y="24" width="1047" height="1084" extended-state="4" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21934865" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21777344" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24902344" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -651,7 +652,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Website/SaaS_Integration_Library/apis/trello.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="33" selection-start="1296" selection-end="1296" vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="825">
+        <state line="43" column="25" selection-start="1471" selection-end="1471" vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
@@ -680,13 +681,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Website/SaaS_Integration_Library/SIL/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Website/SaaS_Integration_Library/SaaS_Integration_Library/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="136" column="30" selection-start="4751" selection-end="4751" vertical-scroll-proportion="0.0" vertical-offset="1575" max-vertical-offset="2715">
@@ -696,10 +690,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Website/SaaS_Integration_Library/SIL/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="353" selection-end="353" vertical-scroll-proportion="0.1659292" vertical-offset="0" max-vertical-offset="904">
+        <state line="10" column="0" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="975">
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Website/SaaS_Integration_Library/SIL/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="421" selection-end="421" vertical-scroll-proportion="0.25751072" vertical-offset="0" max-vertical-offset="932">
+          <folding />
         </state>
       </provider>
     </entry>
