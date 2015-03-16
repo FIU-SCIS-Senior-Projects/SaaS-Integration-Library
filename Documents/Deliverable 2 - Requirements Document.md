@@ -69,6 +69,8 @@ ____
 
 ###6.4 Appendix D - Dynamic UML Diagrams
 
+![Image of Get Data Source Sequence Diagram](images/GetDataSourceSequence.jpg?raw=true)
+
 ###6.5 Appendix E - User Interface Designs
 
 ###6.6 Appendix F - Diary of Meetings and Tasks
