@@ -19,7 +19,7 @@
 ####4.2.1 Scenarios
 
 ####4.2.2 Use Case Model
-![Image of Use Case Diagram](images/UseCaseDiagram.jpg?raw=true)
+![Image of Use Case Diagram](images/SILUseCaseDiagram.png?raw=true)
 ####4.2.3 Static Model
 
 ####4.2.4 Dynamic Model
