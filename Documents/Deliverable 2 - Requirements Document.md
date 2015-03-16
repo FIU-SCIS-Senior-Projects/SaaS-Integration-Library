@@ -30,6 +30,17 @@
 
 ###6.1 Appendix A - Complete Use Cases	
 
+**Title:**View Data Sets
+
+**Description:** After authentication, User has the ability to make API calls on that account in order to retrieve data (Card #110)
+
+**Actor:** SaaS-Integration-Library User (SIL user)
+
+**Preconditions:**Data source for API calls has been verified and SIL user is on API call page.
+
+**Postconditions:**User has been passed to a page containing the returned data from specific API call.
+
+
 **Title:**
 
 **Description:** 
