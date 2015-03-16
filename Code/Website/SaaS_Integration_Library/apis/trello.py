@@ -1,17 +1,13 @@
 #from trello import TrelloApi
 import requests
 import json
-from django.utils import simplejson
+import simplejson
 import pprint
-
-#Developer API Key = 36fb61b8a99b93c4cbf0b63a5f440503
-#Test Token = 36b68eef1b52420e5731962cdb0bef1e8f152874b10f6036ed30bd9f117dc2fe
+#from SaaS_Integration_Library import settings
 
 class Trello(object):
     """Trello API class"""
     TRELLO_KEY = "36fb61b8a99b93c4cbf0b63a5f440503"
-
-    #TODO: Card, List, Label, Member
 
     def __init__(self, token):
         self.credentials = {'key': Trello.TRELLO_KEY, 'token': token}
@@ -22,8 +18,12 @@ class Trello(object):
         self.members = None
         self.labels = None
 
+    def make_call(self, address):
+        return requests.get(address, params=self.credentials)
+
     def get_records(self):
-        resp = requests.get("https://trello.com/1/members/me", params=self.credentials)
+        #resp = requests.get("https://trello.com/1/members/me", params=self.credentials)
+        resp = self.make_call("https://trello.com/1/members/me")
         self.record = resp.json()
         return self.record
 
@@ -106,3 +106,4 @@ class Trello(object):
             self.labels.append(labelinfo)
 
         return self.labels
+

@@ -38,7 +38,9 @@ def api(request, api_name):
         context_dict['calls'] = {}
         for call in api.calls:
             context_dict['calls'][call] = call.replace('_', ' ')
+
         context_dict['credentials'] = cred.settings['token']
+
     except Api.DoesNotExist:
         pass
 
@@ -67,10 +69,18 @@ def apicall(request, api_name, action_name):
         #create call object to as to return
         call = Call.objects.create(api=api,name=action_name, response=getattr(api_obj, action_name)())
         context_dict['call'] = call
-        #TODO make json dump pretty
-        context_dict['response'] = simplejson.dumps(call.response)#HttpResponse(simplejson.dumps(call.response),content_type="application/json")
+        context_dict['response'] = simplejson.dumps(call.response)
         context_dict['action'] = action.upper()
 
+        #TODO make json dump pretty
+        labels = []
+        #for item in call.response:
+        for k,v in call.response[0].iteritems(): #item.iteritems():
+            if type(v) == list:
+                for label in v:
+                    print label.keys
+        #labels.append(item.key)
+        context_dict['labels'] = labels
     except (Api.DoesNotExist, Call.DoesNotExist, AttributeError):
         pass
 
