@@ -67,6 +67,8 @@ ____
 
 ###6.3 Appendix C - Static UML Diagrams
 
+![Image of Trello Class Diagram](images/TrelloApiClassDiagram.jpg?raw=true)
+
 ###6.4 Appendix D - Dynamic UML Diagrams
 
 ![Image of Get Data Source Sequence Diagram](images/GetDataSourceSequence.jpg?raw=true)
