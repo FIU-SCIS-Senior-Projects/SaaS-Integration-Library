@@ -10,8 +10,20 @@ from SIL.models import ApiCredential, Api, Call
 
 def index(request):
     context = RequestContext(request)
-    context_dict = {'mainmessage': "Explore Third Party APIs!"}
+    context_dict = {'mainmessage': "Click to add a Datasource"}
     return render_to_response('SIL/index.html', context_dict, context)
+
+def datasource(request):
+    context = RequestContext(request)
+    context_dict = {}
+
+    return render_to_response('SIL/datasource.html', context_dict, context)
+
+def confirmation(request, api_name):
+    context = RequestContext(request)
+    context_dict = {'api_name' : api_name}
+
+    return render_to_response('SIL/confirmation.html', context_dict, context)
 
 def datasets(request):
     context = RequestContext(request)
@@ -69,18 +81,23 @@ def apicall(request, api_name, action_name):
         #create call object to as to return
         call = Call.objects.create(api=api,name=action_name, response=getattr(api_obj, action_name)())
         context_dict['call'] = call
-        context_dict['response'] = simplejson.dumps(call.response)
+        context_dict['response'] = call.response
         context_dict['action'] = action.upper()
 
+        items = []
+        for item in call.response:
+            items.append(item)
+        # print items
         #TODO make json dump pretty
         labels = []
+
         #for item in call.response:
         for k,v in call.response[0].iteritems(): #item.iteritems():
-            if type(v) == list:
-                for label in v:
-                    print label.keys
-        #labels.append(item.key)
+            # print k
+            labels.append(k)
+
         context_dict['labels'] = labels
+        context_dict['items'] = items
     except (Api.DoesNotExist, Call.DoesNotExist, AttributeError):
         pass
 

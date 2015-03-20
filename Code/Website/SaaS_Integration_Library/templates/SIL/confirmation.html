@@ -1,0 +1,15 @@
+{% extends 'SIL/base.html' %}
+
+{% load static %}
+
+{% block title %}Confirmation{% endblock %}
+
+{% block body_block %}
+    <div class="hero-unit">
+        <p>Congratulations! Your {{api_name}} had been authenticated</p>
+        <br>
+        <p>User Name is:{{user_name}}</p>
+        <br>
+        <p>Visit <a href={% url 'datasets' %}>Datasets</a> page to view data available from {{api_name}}</p>
+    </div>
+{% endblock %}
