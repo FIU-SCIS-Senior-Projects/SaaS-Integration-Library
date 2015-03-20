@@ -19,7 +19,7 @@
 ####4.2.1 Scenarios
 
 ####4.2.2 Use Case Model
-![Image of Use Case Diagram](images/UseCaseDiagram.jpg?raw=true)
+![Image of Use Case Diagram](images/SILUseCaseDiagram.png?raw=true)
 ####4.2.3 Static Model
 
 ####4.2.4 Dynamic Model
@@ -29,6 +29,28 @@
 ##6. Appendix
 
 ###6.1 Appendix A - Complete Use Cases	
+
+**Title:** View Data Source
+
+**Description:** After authentication, User has the ability to make API calls on that account in order to retrieve data (Card #110)
+
+**Actor:** SaaS-Integration-Library User (SIL user)
+
+**Preconditions:** Data source for API calls has been verified and SIL user is on API call page.
+
+**Steps:** 
+
+Step 1: User clicks link for an API call.
+
+Step 2: System makes call to API behind the scenes.
+
+Step 3: API returns data from call.
+
+Step 4: System loads new page with data returned from API call.
+
+**Postconditions:** User has been passed to a page containing the returned data from specific API call.
+____
+
 
 **Title:**
 
@@ -45,7 +67,11 @@
 
 ###6.3 Appendix C - Static UML Diagrams
 
+![Image of Trello Class Diagram](images/TrelloApiClassDiagram.jpg?raw=true)
+
 ###6.4 Appendix D - Dynamic UML Diagrams
+
+![Image of Get Data Source Sequence Diagram](images/GetDataSourceSequence.jpg?raw=true)
 
 ###6.5 Appendix E - User Interface Designs
 
