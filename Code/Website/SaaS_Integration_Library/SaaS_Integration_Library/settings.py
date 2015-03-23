@@ -176,11 +176,6 @@ LOGGING = {
 }
 
 AUTHENTICATION_BACKENDS = (
-    'social.backends.open_id.OpenIdAuth',
-    'social.backends.google.GoogleOpenId',
-    'social.backends.google.GoogleOAuth2',
-    'social.backends.google.GoogleOAuth',
-    'social.backends.email.EmailAuth',
-    'social.backends.username.UsernameAuth',
+    'social.backends.trello.TrelloOAuth',
     'django.contrib.auth.backends.ModelBackend',
  )

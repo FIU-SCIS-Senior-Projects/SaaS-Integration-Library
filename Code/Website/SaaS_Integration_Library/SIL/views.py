@@ -4,6 +4,7 @@ from django.shortcuts import render_to_response
 
 import simplejson
 
+from SaaS_Integration_Library import settings
 from apis import trello
 from SIL.models import ApiCredential, Api, Call
 
@@ -16,6 +17,7 @@ def index(request):
 def datasource(request):
     context = RequestContext(request)
     context_dict = {}
+    context_dict['trello_key'] = settings.TRELLO_KEY
 
     return render_to_response('SIL/datasource.html', context_dict, context)
 
@@ -29,6 +31,7 @@ def datasets(request):
     context = RequestContext(request)
 
     context_dict = {}
+
     # try:
     #
     # except AttributeError:
