@@ -96,7 +96,7 @@ ____
 
 ![Image of Get Data Source Sequence Diagram](images/GetDataSourceSequence.jpg?raw=true)
 
-![Image of Get Data Source Sequence Diagram](images/CreateDataSourceSequence.jpg?raw=true)
+![Image of View Data Source Sequence Diagram](images/CreateDataSourceSequence.jpg?raw=true)
 
 ###6.5 Appendix E - User Interface Designs
 
