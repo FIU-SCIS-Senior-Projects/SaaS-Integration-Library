@@ -34,7 +34,7 @@
 
 **Description:** After authentication, User has the ability to make API calls on that account in order to retrieve data (Card #110)
 
-**Actor:** SaaS-Integration-Library User (SIL user)
+**Actor:** SaaS-Integration-Library User (SIL user) and third party API
 
 **Preconditions:** Data source for API calls has been verified and SIL user is on API call page.
 
@@ -42,13 +42,36 @@
 
 Step 1: User clicks link for an API call.
 
-Step 2: System makes call to API behind the scenes.
+Step 2: System gets the Api model object for the call.
 
-Step 3: API returns data from call.
+Step 3: System makes call to API behind the scenes, creating an API object to make the call.
 
-Step 4: System loads new page with data returned from API call.
+Step 4: API returns data from call.
+
+Step 5: System loads new page with data returned from API call.
 
 **Postconditions:** User has been passed to a page containing the returned data from specific API call.
+____
+
+**Title:** Create Data Source
+
+**Description:** After authentication, User has the ability to create a data source (Card #160)
+
+**Actor:** SaaS-Integration-Library user (SIL user) and third party API
+
+**Preconditions:** User has an account with third party and has navigated to Create Data Source page
+
+**Steps:** 
+
+Step 1: User clicks link for an API.
+
+Step 2: System requests a token on the users behalf from the API.
+
+Step 3: After user accepts SIL to have access to his/her account, system creates ApiCredential and Api object with token information.
+
+Step 4: System redirects to confirmation page.
+
+**Postconditions:** User has been passed to a page displaying successful creation.
 ____
 
 
