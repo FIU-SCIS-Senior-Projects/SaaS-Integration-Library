@@ -24,6 +24,11 @@ def datasource(request):
 def confirmation(request, api_name):
     context = RequestContext(request)
     context_dict = {'api_name' : api_name}
+    token = request.GET.get('token', '')
+
+    #TODO Trello hardcoded!
+    credentials = ApiCredential.objects.get_or_create(name=api_name, settings={'key': settings.TRELLO_KEY,'token': token})[0]
+    Api.objects.get_or_create(credentials=credentials, name=api_name, calls={'get_all_boards', 'get_all_cards', 'get_members', 'get_lists', 'get_labels'})
 
     return render_to_response('SIL/confirmation.html', context_dict, context)
 

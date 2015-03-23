@@ -4,16 +4,12 @@
 
 {% block title %}Index{% endblock %}
 
-<!---<html>
-	<head>
-        <img src="{% static "brightgaugelogo.png"%}" alt="BrightGauge Logo"/>
-		<title>SaaS Integration Library</title>
-	<head>--->
-    {% block body_block %}
-    <div class="hero-unit">
-		<h1>BrightGauge SaaS Reporting </h1>
-        <!--<p>Welcome{% if user.is_authenticated %} {{ user.username }}{% endif %}!</p>-->
-		<br>
-		{{mainmessage}}
-    </div>
-	{% endblock %}
+
+{% block body_block %}
+<div class="hero-unit">
+    <h1>BrightGauge SaaS Reporting </h1>
+
+    <br>
+    {{mainmessage}}
+</div>
+{% endblock %}
