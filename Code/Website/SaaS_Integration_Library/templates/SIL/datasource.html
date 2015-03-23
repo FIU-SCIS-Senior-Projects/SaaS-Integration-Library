@@ -2,41 +2,6 @@
 
 {% load static %}
 
-<script src="https://api.trello.com/1/client.js?key={{ trello_key }}">
-Trello.authorize({
-    interactive:false,
-    success: onAuthorize
-});
-
-$("#trello_connect")
-.click(function(){
-    Trello.authorize({
-        name: "SaaS Integration Library",
-        type: "popup",
-        interactive: true,
-        expiration: "never",
-        persist: true,
-        success: onAuthorize,
-        scope: { write: false, read: true }
-    })
-});
-
-var onAuthorize = function () {
-  var token = Trello.token();
-  window.location.replace("/auth?token=" + token);
-}
-</script>
-
-<script>if (typeof jQuery != 'undefined') {
-
-    alert("jQuery library is loaded!");
-
-}else{
-
-    alert("jQuery library is not found!");
-
-}</script>
-
 {% block title %}DataSources{% endblock %}
 
 {% block body_block %}
