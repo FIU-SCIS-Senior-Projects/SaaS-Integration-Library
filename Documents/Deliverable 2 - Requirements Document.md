@@ -53,6 +53,7 @@ Step 5: System loads new page with data returned from API call.
 **Postconditions:** User has been passed to a page containing the returned data from specific API call.
 ____
 
+
 **Title:** Create Data Source
 
 **Description:** After authentication, User has the ability to create a data source (Card #160)
@@ -102,7 +103,7 @@ ____
 
 ###6.6 Appendix F - Diary of Meetings and Tasks
 	
-**Diary Entry** - January 22 2014
+**Diary Entry** - January 22 2015
 
 **Location:** BrightGauge
 
@@ -120,7 +121,7 @@ ____
 ____
 
 
-**Diary Entry** - January 29 2014
+**Diary Entry** - January 29 2015
 
 **Location:** BrightGauge
 
@@ -135,3 +136,85 @@ ____
 **Summary of discussion:** Mapped out basic data management system, user interface design, git branching
 
 **Assigned tasks:** Adam - Continue documentation, learn about Django		
+____
+
+
+**Diary Entry** - February 12,  2015
+
+**Location:** BrightGauge
+
+**Start time:** 3:30 PM
+
+**End time:** 4:00 PM
+
+**In attendance:** Adam, Brian, Orlando, Steve
+
+**Agenda:** Sprint Review
+
+**Summary of discussion:** 
+User Stories:
+	attribute/fields list
+	high level view without data
+	Highcharts
+
+Next time:
+	more code reviews
+	demo at end of sprint
+
+**Assigned tasks:** Adam - 
+	--variables in init
+	--no camel case
+	--format strings
+	--requests.get takes params
+	--checks inside of get all cards
+	try, except
+	move KEY to Settings
+__
+
+
+**Diary Entry** - February 25,  2015
+
+**Location:** BrightGauge
+
+**Start time:** 3:30 PM
+
+**End time:** 4:00 PM
+
+**In attendance:** Adam, Brian, Orlando, Steve
+
+**Agenda:** Sprint Review
+
+**Summary of discussion:** shortcut to render_to_response, check newer docs called render()
+
+__iexact() case insensitive searching
+
+views - apicall - just delete query no need to check
+
+no need to change response to json, keep as data obj
+
+python mock library
+
+get list of items to pass to template, then get keys() and then loop through to get items()
+
+**Assigned tasks:** Adam - above recommendations in addition to assigned user stories
+__
+
+
+**Diary Entry** - March 19,  2015
+
+**Location:** BrightGauge
+
+**Start time:** 3:30 PM
+
+**End time:** 4:00 PM
+
+**In attendance:** Adam, Brian, Orlando, Steve
+
+**Agenda:** Sprint Review
+
+**Summary of discussion:** discussed sprint review and job offer
+
+**Assigned tasks:** Adam - 
+Overflow hidden css element
+Use oauth for Trello
+send javascript issues to Orland and work on fixing
