@@ -2,13 +2,6 @@
 
 {% load static%}
 
-<!-- DataTables CSS -->
-<link rel="stylesheet" type="text/css" href="{% static '/static/DataTables-1.10.5/media/css/jquery.dataTables.css' %}">
-<!-- jQuery -->
-<script type="text/javascript" charset="utf8" src="{% static '/static/DataTables-1.10.5/media/js/jquery.js' %}"></script>
-<!-- DataTables -->
-<script type="text/javascript" charset="utf8" src="{% static '/static/DataTables-1.10.5/media/js/jquery.dataTables.js' %}"></script>
-
 {% block title %}{{ action }}{% endblock %}
 
 {% block body_block %}
@@ -53,9 +46,4 @@
             </ul>
         {% endif %}
     </div>
-        <script>
-            $(document).ready(function () {
-                $('#call').dataTable();
-            } );
-        </script>
 {% endblock %}

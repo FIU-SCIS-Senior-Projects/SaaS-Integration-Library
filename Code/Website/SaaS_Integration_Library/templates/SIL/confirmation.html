@@ -6,10 +6,10 @@
 
 {% block body_block %}
     <div class="hero-unit">
-        <p>Congratulations! Your {{api_name}} had been authenticated</p>
+        <h3>Congratulations! Your {{api_name}} account has been authenticated</h3>
         <br>
-        <p>User Name is:{{user_name}}</p>
+        <h3>User Name is:{{user_name}}</h3>
         <br>
-        <p>Visit <a href={% url 'datasets' %}>Datasets</a> page to view data available from {{api_name}}</p>
+        <h3>Visit <a href={% url 'datasets' %}>Datasets</a> page to view data available from {{api_name}}</h3>
     </div>
 {% endblock %}

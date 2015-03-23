@@ -33,29 +33,40 @@
             }
 
         </style>
-        <script src="https://api.trello.com/1/client.js?key={{ trello_key }}">
+        <script type="text/javascript" src="https://api.trello.com/1/client.js?key={{ trello_key }}">
+        </script>
+        <script type="text/javascript">
         Trello.authorize({
             interactive:false,
             success: onAuthorize
         });
 
-        $("#trello_connect")
-        .click(function(){
-            Trello.authorize({
-                name: "SaaS Integration Library",
-                type: "popup",
-                interactive: true,
-                expiration: "never",
-                persist: true,
-                success: onAuthorize,
-                scope: { write: false, read: true }
+        $(document).ready(function (){
+            $("#trello_connect")
+            .click(function(){
+                Trello.authorize({
+                    name: "SaaS Integration Library",
+                    type: "popup",
+                    interactive: true,
+                    expiration: "never",
+                    persist: true,
+                    success: onAuthorize,
+                    scope: { write: false, read: true }
+                })
             })
         });
 
         var onAuthorize = function () {
         var token = Trello.token();
-        window.location.replace("/auth?token=" + token);
+        window.location.replace("confirmation/Trello?token=" + token);
         }
+        </script>
+
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#call').dataTable();
+            } );
         </script>
 
         <title>SaaS Integration Library - {% block title%} API Explorer {% endblock %}</title>
