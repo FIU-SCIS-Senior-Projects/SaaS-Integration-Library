@@ -10,21 +10,21 @@ from jsonfield import JSONField
 #        return self.user.username
 
 
-class ApiCredential(models.Model):
-    name = models.CharField(max_length=128)
-    settings = JSONField(default={})
-
-    #def __unicode__(self):
-    #return self.name, self.settings
-
-
 class Api(models.Model):
-    credentials = models.ForeignKey(ApiCredential)
-    name = models.CharField(max_length=128)
+    name = models.CharField(max_length=128, default="trello")
     calls = JSONField(default={})
 
     def __unicode__(self):
         return self.name
+
+
+class ApiCredential(models.Model):
+    name = models.CharField(max_length=128)
+    settings = JSONField(default={})
+    api = models.ForeignKey(Api)
+
+   # def __unicode__(self):
+    #    return self.name, self.settings
 
 
 class Call(models.Model):

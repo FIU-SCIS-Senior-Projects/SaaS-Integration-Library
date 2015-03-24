@@ -37,21 +37,30 @@ def datasets(request):
 
     context_dict = {}
 
-    # try:
-    #
-    # except AttributeError:
-    #     pass
+    #TODO have global list of current api names
+    api_list = ['trello']
+
+    try:
+        cred = {}
+        for api_name in api_list:
+            cur_api = Api.objects.get(name=api_name)
+            cred[ApiCredential.objects.get(api=cur_api).name] = ApiCredential.objects.get(api=cur_api).name.replace(' ', '_')
+
+        context_dict['datasets'] = cred
+        print cred
+    except AttributeError:
+       pass
 
     return render_to_response('SIL/datasets.html', context_dict, context)
 
-def api(request, api_name):
+def api(request, api_cred):
     context = RequestContext(request)
 
-    context_dict = {'api_name': api_name}
+    context_dict = {'api_cred': api_cred}
 
     try:
-        api = Api.objects.get(name=api_name.lower())
-        cred = api.credentials
+        cred = ApiCredential.objects.get(name=api_cred.replace('_', ' '))
+        api = cred.api
         context_dict['api'] = api
 
         #loop through calls to clear out '_'s between names
@@ -67,18 +76,21 @@ def api(request, api_name):
     return render_to_response('SIL/api.html', context_dict, context)
 
 
-def apicall(request, api_name, action_name):
+def apicall(request, api_cred, action_name):
     context = RequestContext(request)
 
     action = action_name.replace('_', ' ')          #name to display
+    cred = ApiCredential.objects.get(name=api_cred.replace('_', ' '))
 
     context_dict = {'action_name': action_name}
 
     try:
         #need if to check whether api credentials exist already?
         #Get the Api object, then obtain the credentials from the given Api and create object to make calls
-        api = Api.objects.get(name=api_name.lower())
-        api_tok = api.credentials.settings['token']
+        api = cred.api
+        api_tok = cred.settings['token']
+
+        #make more modular, name lookup
         api_obj = trello.Trello(api_tok)
 
         #if the call exists already, delete it to make more recent call
@@ -95,13 +107,10 @@ def apicall(request, api_name, action_name):
         items = []
         for item in call.response:
             items.append(item)
-        # print items
-        #TODO make json dump pretty
+
         labels = []
 
-        #for item in call.response:
-        for k,v in call.response[0].iteritems(): #item.iteritems():
-            # print k
+        for k,v in call.response[0].iteritems():
             labels.append(k)
 
         context_dict['labels'] = labels

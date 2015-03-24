@@ -9,7 +9,9 @@
         <!--<button class="btn btn-primary" type="submit">Add Dataset</button>-->
         <!--<br><br>-->
         <ul>
-            <li><a href="/SIL/api/Trello"> Trello </a> </li>
+            {% for k,v in datasets.items %}
+            <li><a href="/SIL/api/{{ v }}"> {{ k}} </a> </li>
+            {% endfor %}
         </ul>
     </div>
 {% endblock %}
