@@ -6,10 +6,12 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Bootstrap -->
-        <link href="{% static 'css/bootstrap-fluid-adj.css' %}" rel="stylesheet">
-        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
-        <link href="{% static 'css/bootstrap-responsive.css' %}" rel="stylesheet">
+        <link href="{% static 'css-bootstrap/bootstrap-fluid-adj.css' %}" rel="stylesheet">
+        <link href="{% static 'css-bootstrap/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+        <link href="{% static 'css-bootstrap/bootstrap-responsive.css' %}" rel="stylesheet">
 
+        <!-- Main css -->
+        <link href="{% static 'css/main.css' %}" rel="stylesheet">
         <!-- DataTables CSS -->
         <link rel="stylesheet" type="text/css" href="{% static '/static/DataTables-1.10.5/media/css/jquery.dataTables.css' %}">
         <!-- jQuery -->
@@ -17,22 +19,6 @@
         <!-- DataTables -->
         <script type="text/javascript" charset="utf8" src="{% static '/static/DataTables-1.10.5/media/js/jquery.dataTables.js' %}"></script>
 
-        <style>
-            html, body {
-                min-height: 100%;
-                height: 100%;
-             }
-
-
-
-            .footer {
-                position: relative;
-                left: 0;
-                bottom: 0;
-                width: 100%;
-            }
-
-        </style>
         <script type="text/javascript" src="https://api.trello.com/1/client.js?key={{ trello_key }}">
         </script>
         <script type="text/javascript">
@@ -65,7 +51,10 @@
 
         <script type="text/javascript">
             $(document).ready(function () {
-                $('#call').dataTable();
+                $('#call').dataTable({
+                 "scrollX": true,
+                  "scrollY": '500px'
+                 });
             } );
         </script>
 
@@ -123,13 +112,12 @@
         </div>
 
         <div class="footer" >
-             <hr>
             <div class="container">
                 <p>&copy; SaaS Integration Library: API Explorer</p>
             </div>
         </div>
 
-        <script src="{% static 'js/jquery-2.1.3.min.js' %}"></script>
+        <!--<script src="{% static 'js/jquery-2.1.3.min.js' %}"></script>-->
         <script src="{% static 'js/bootstrap.min.js' %}"></script>
     </body>
 </html>

@@ -16,6 +16,7 @@
             <!--{{ response }}-->
         <br>
             <!--{{ labels }}-->
+        <div class="table">
             <table id="call" class="table table-striped dataTable display">
                 <thead>
                     <tr>
@@ -34,7 +35,7 @@
                     {% endfor %}
                 </tbody>
             </table>
-
+        </div>
         {% else %}
             The specified call {{ action }} did not return anything!
             <br>

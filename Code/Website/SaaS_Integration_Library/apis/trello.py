@@ -22,7 +22,6 @@ class Trello(object):
         return requests.get(address, params=self.credentials)
 
     def get_records(self):
-        #resp = requests.get("https://trello.com/1/members/me", params=self.credentials)
         resp = self.make_call("https://trello.com/1/members/me")
         self.record = resp.json()
         return self.record
