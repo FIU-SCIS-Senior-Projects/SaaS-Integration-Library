@@ -1,6 +1,37 @@
 {% extends 'SIL/base.html' %}
 
 {% load static %}
+{% block head_block %}
+<script type="text/javascript" src="https://api.trello.com/1/client.js?key={{ trello_key }}">
+</script>
+
+<script type="text/javascript">
+    Trello.authorize({
+        interactive:false,
+        success: onAuthorize
+    });
+
+    $(document).ready(function (){
+        $("#trello_connect")
+        .click(function(){
+            Trello.authorize({
+                name: "SaaS Integration Library",
+                type: "popup",
+                interactive: true,
+                expiration: "never",
+                persist: true,
+                success: onAuthorize,
+                scope: { write: false, read: true }
+            })
+        })
+    });
+
+    var onAuthorize = function () {
+    var token = Trello.token();
+    window.location.replace("confirmation/Trello?token=" + token);
+    }
+</script>
+{% endblock %}
 
 {% block title %}DataSources{% endblock %}
 

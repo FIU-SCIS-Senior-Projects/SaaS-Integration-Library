@@ -11,7 +11,7 @@ from SIL.models import ApiCredential, Api, Call
 
 def index(request):
     context = RequestContext(request)
-    context_dict = {'mainmessage': "Click to add a Datasource"}
+    context_dict = {}
     return render_to_response('SIL/index.html', context_dict, context)
 
 def datasource(request):
@@ -32,7 +32,7 @@ def confirmation(request, api_name):
     context_dict['username'] = user_name
 
     api = Api.objects.get(name=api_name.lower())
-    credentials = ApiCredential.objects.create(name=(api_name+user_name), settings={'key': settings.TRELLO_KEY,'token': token}, api=api)
+    credentials = ApiCredential.objects.create(name=(api_name+' '+user_name), settings={'key': settings.TRELLO_KEY,'token': token}, api=api)
 
     return render_to_response('SIL/confirmation.html', context_dict, context)
 
@@ -48,7 +48,9 @@ def datasets(request):
         cred = {}
         for api_name in api_list:
             cur_api = Api.objects.get(name=api_name)
-            cred[ApiCredential.objects.get(api=cur_api).name] = ApiCredential.objects.get(api=cur_api).name.replace(' ', '_')
+            api_creds = ApiCredential.objects.filter(api=cur_api)
+            for api_cred in api_creds:
+                cred[api_cred.name] = api_cred.name.replace(' ', '_')
 
         context_dict['datasets'] = cred
 

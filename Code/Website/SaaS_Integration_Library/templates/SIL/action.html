@@ -1,6 +1,23 @@
 {% extends 'SIL/base.html' %}
 
 {% load static%}
+{%block head_block%}
+
+<!-- DataTables CSS -->
+<link rel="stylesheet" type="text/css" href="{% static '/static/DataTables-1.10.5/media/css/jquery.dataTables.css' %}">
+<!-- DataTables -->
+<script type="text/javascript" charset="utf8" src="{% static '/static/DataTables-1.10.5/media/js/jquery.dataTables.js' %}"></script>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#call').dataTable({
+         "scrollX": true,
+          "scrollY": '500px'
+         });
+    } );
+</script>
+{% endblock %}
 
 {% block title %}{{ action }}{% endblock %}
 

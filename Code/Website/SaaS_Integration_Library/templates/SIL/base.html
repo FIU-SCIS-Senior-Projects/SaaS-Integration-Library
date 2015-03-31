@@ -12,51 +12,12 @@
 
         <!-- Main css -->
         <link href="{% static 'css/main.css' %}" rel="stylesheet">
-        <!-- DataTables CSS -->
-        <link rel="stylesheet" type="text/css" href="{% static '/static/DataTables-1.10.5/media/css/jquery.dataTables.css' %}">
+
         <!-- jQuery -->
         <script type="text/javascript" charset="utf8" src="{% static '/static/DataTables-1.10.5/media/js/jquery.js' %}"></script>
-        <!-- DataTables -->
-        <script type="text/javascript" charset="utf8" src="{% static '/static/DataTables-1.10.5/media/js/jquery.dataTables.js' %}"></script>
 
-        <script type="text/javascript" src="https://api.trello.com/1/client.js?key={{ trello_key }}">
-        </script>
-        <script type="text/javascript">
-        Trello.authorize({
-            interactive:false,
-            success: onAuthorize
-        });
-
-        $(document).ready(function (){
-            $("#trello_connect")
-            .click(function(){
-                Trello.authorize({
-                    name: "SaaS Integration Library",
-                    type: "popup",
-                    interactive: true,
-                    expiration: "never",
-                    persist: true,
-                    success: onAuthorize,
-                    scope: { write: false, read: true }
-                })
-            })
-        });
-
-        var onAuthorize = function () {
-        var token = Trello.token();
-        window.location.replace("confirmation/Trello?token=" + token);
-        }
-        </script>
-
-
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $('#call').dataTable({
-                 "scrollX": true,
-                  "scrollY": '500px'
-                 });
-            } );
-        </script>
+        {% block head_block %}
+        {% endblock %}
 
         <title>SaaS Integration Library - {% block title%} API Explorer {% endblock %}</title>
     </head>
@@ -96,7 +57,6 @@
             </div>
         </div>
 
-        <!--<script src="{% static 'js/jquery-2.1.3.min.js' %}"></script>-->
         <script src="{% static 'js/bootstrap.min.js' %}"></script>
     </body>
 </html>
