@@ -62,57 +62,36 @@
     </head>
 
     <body>
-        <div id="wrap">
-            <div class="navbar navbar-inverse navbar-fixed-top">
-               <div class="navbar-inner">
+        <div class="navbar navbar-fixed-top">
+           <div class="navbar-inner">
+               <div class="container pull-left">
+                   <a class="brand" href="/SIL/"> <img style="PADDING-LEFT: 15px" src="{% static "brightgaugelogo.png" %}" alt="BrightGauge Logo" /> </a>
+                   <button type="button" class="btn btn-navbar pull-right" data-toggle="collapse" data-target=".nav-collapse">
+                   </button>
 
-                       <a class="brand" href="/SIL/"> <img src="{% static "brightgaugelogo.png" %}" alt="BrightGauge Logo" /> </a>
-                   <div class="container">
-                       <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                           <span class="icon-bar"></span>
-                           <span class="icon-bar"></span>
-                           <span class="icon-bar"></span>
-                       </button>
-
-                       <div class="nav-collapse collapse">
-                           <ul class="nav pull-right">
-
-
-                           </ul>
-                           <ul class="nav">
-
-                               <li><a href="/SIL/api">Datasets</a></li>
-                               <li><a href="/SIL/datasource">Datasources</a></li>
-                           </ul>
-                       </div>
-                       <!--/.nav-collapse -->
+                   <div class="nav-collapse collapse">
+                       <ul class="navbar nav navbar-nav">
+                           <li><a style="color: white" href="/SIL/api">Datasets</a></li>
+                           <li><a style="color: white" href="/SIL/datasource">Datasources</a></li>
+                       </ul>
                    </div>
+                   <!--/.nav-collapse -->
                </div>
-            </div>
-
-            <div class="container-fluid">
-                <div class="row-fluid">
-                    <!--<div class="span3">-->
-                        <!--<div class="well sidebar-nav">-->
-                            <!--&lt;!&ndash;- Empty for the timebeing &ndash;&gt;-->
-                        <!--</div>-->
-                        <!--&lt;!&ndash;/.well &ndash;&gt;-->
-                    <!--</div>-->
-                    <!--/span-->
-                    <!--<div class="span9">-->
-                         <!-- Page specific content goes here -->
-                        {% block body_block %}
-                        {% endblock %}
-                    <!--</div>-->
-                    <!--/span-->
-                </div>
-                <!--/row-->
-            </div>
-            <!--/.fluid-container-->
+           </div>
         </div>
 
+        <div class="container-fluid">
+            <div class="row-fluid">
+                     <!-- Page specific content goes here -->
+                    {% block body_block %}
+                    {% endblock %}
+            </div>
+            <!--/row-->
+        </div>
+        <!--/.fluid-container-->
+
         <div class="footer" >
-            <div class="container">
+            <div class="container pull-left">
                 <p>&copy; SaaS Integration Library: API Explorer</p>
             </div>
         </div>

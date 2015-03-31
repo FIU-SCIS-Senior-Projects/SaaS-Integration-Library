@@ -51,7 +51,7 @@ def datasets(request):
             cred[ApiCredential.objects.get(api=cur_api).name] = ApiCredential.objects.get(api=cur_api).name.replace(' ', '_')
 
         context_dict['datasets'] = cred
-        print cred
+
     except AttributeError:
        pass
 
@@ -97,9 +97,8 @@ def apicall(request, api_cred, action_name):
         #make more modular, name lookup
         api_obj = trello.Trello(api_tok)
 
-        #if the call exists already, delete it to make more recent call
-        if Call.objects.filter(name=action_name) is not None:
-            Call.objects.filter(name=action_name).delete()
+        #delete it to make more recent call
+        Call.objects.filter(name=action_name).delete()
 
         #what about if call requires argument?
         #create call object to as to return
@@ -113,7 +112,6 @@ def apicall(request, api_cred, action_name):
             items.append(item)
 
         labels = []
-
         for k,v in call.response[0].iteritems():
             labels.append(k)
 

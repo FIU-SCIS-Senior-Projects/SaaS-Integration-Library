@@ -1,5 +1,6 @@
 #from trello import TrelloApi
 import requests
+from itertools import izip
 import json
 import simplejson
 import pprint
@@ -47,12 +48,13 @@ class Trello(object):
             self.get_all_boards()
 
         for board in self.boards:
-            cardinfo = {}
             resp = requests.get("https://trello.com/1/boards/{board_id}/cards".format(board_id=board['id']),
                                 params=self.credentials)
-            cardinfo['boardId'] = board['id']
-            cardinfo['cards'] = resp.json()
-            self.cards.append(cardinfo)
+
+            #for each card in board, add board id and then append to cards list
+            for element in resp.json():
+                element['boardId'] = board['id']
+                self.cards.append(element)
 
         return self.cards
 
@@ -64,11 +66,10 @@ class Trello(object):
             self.get_all_boards()
 
         for board in self.boards:
-            listinfo = {}
             resp = requests.get("https://trello.com/1/boards/{board_id}/lists".format(board_id=board['id']), params=self.credentials)
-            listinfo['boardId'] = board['id']
-            listinfo['lists'] = resp.json()
-            self.lists.append(listinfo)
+
+            for element in resp.json():
+                self.lists.append(element)
 
         return self.lists
 
@@ -83,9 +84,11 @@ class Trello(object):
         for board in self.boards:
             memberinfo = {}
             resp = requests.get("https://trello.com/1/boards/{board_id}/members".format(board_id=board['id']), params=self.credentials)
-            memberinfo['boardId'] = board['id']
-            memberinfo['members'] = resp.json()
-            self.members.append(memberinfo)
+
+            #for each member in board, add board id and then append to members list
+            for element in resp.json():
+                element['boardId'] = board['id']
+                self.members.append(element)
 
         return self.members
 
@@ -98,11 +101,9 @@ class Trello(object):
             self.get_all_boards()
 
         for board in self.boards:
-            labelinfo = {}
             resp = requests.get("https://trello.com/1/boards/{board_id}/labels".format(board_id=board['id']), params=self.credentials)
-            labelinfo['boardId'] = board['id']
-            labelinfo['labels'] = resp.json()
-            self.labels.append(labelinfo)
+            for element in resp.json():
+                self.labels.append(element)
 
         return self.labels
 
