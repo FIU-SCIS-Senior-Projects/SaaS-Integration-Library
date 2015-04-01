@@ -111,6 +111,7 @@ def apicall(request, api_cred, action_name):
 
         items = []
         for item in call.response:
+            #TODO find http and make link, then append
             items.append(item)
 
         labels = []

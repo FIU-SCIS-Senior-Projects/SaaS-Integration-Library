@@ -16,6 +16,7 @@
 .footer {
     position: fixed;
     padding-top: 10px;
+    padding-left: 10px;
     left: 0px;
     bottom: 0px;
     width: 100%;
