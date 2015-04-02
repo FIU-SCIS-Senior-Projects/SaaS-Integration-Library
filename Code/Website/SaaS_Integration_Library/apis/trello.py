@@ -53,8 +53,35 @@ class Trello(object):
 
             #for each card in board, add board id and then append to cards list
             for element in resp.json():
-                element['boardId'] = board['id']
+                element['boardName'] = board['name']
                 self.cards.append(element)
+
+        # Clean up fields: remove Labels, pos, Manualcoverattachment, idshort,
+        # checkitemstates, descdata, idattachmentcover
+        # join in other API Calls
+        for card in self.cards:
+            del card['labels']
+            del card['pos']
+            del card['manualCoverAttachment']
+            del card['idShort']
+            del card['checkItemStates']
+            del card['descData']
+            del card['idAttachmentCover']
+
+            # replace idlist with list name
+            list_id = card['idList']
+            del card['idList']
+            card['listName'] = self.get_list_name(list_id)
+
+            # replace idmembers with member names
+            member_ids = card['idMembers']
+            del card['idMembers']
+            card['memberNames'] = self.get_member_names(member_ids)
+
+            # replace idlabels with label names
+            label_ids = card['idLabels']
+            del card['idLabels']
+            card['labelNames'] = self.get_label_names(label_ids)
 
         return self.cards
 
@@ -107,3 +134,45 @@ class Trello(object):
 
         return self.labels
 
+    def get_list_name(self, list_id):
+        listName = ""
+
+        # Need update procedure?
+        if self.lists == None:
+            self.get_lists()
+
+        for list in self.lists:
+            if list['id'] == list_id:
+                listName = list['name']
+
+        return listName
+
+    def get_member_names(self, member_ids):
+        member_names = []
+
+        # Need update procedure?
+        if self.members == None:
+            self.get_members()
+
+        for member in self.members:
+            for member_id in member_ids:
+                if member['id'] == member_id:
+                    username = str(member['username'])
+                    member_names.append(username)
+
+        return member_names
+
+    def get_label_names(self, label_ids):
+        label_names = []
+
+        # Need update procedure?
+        if self.labels == None:
+            self.get_labels()
+
+        for label in self.labels:
+            for label_id in label_ids:
+                # if found id and the name is not blank string
+                if label['id'] == label_id and label['name'] != "":
+                    label_names.append(json.dumps(label['name']))
+
+        return label_names
