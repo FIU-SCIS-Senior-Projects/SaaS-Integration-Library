@@ -156,7 +156,8 @@ class Trello(object):
 
         for member in self.members:
             for member_id in member_ids:
-                if member['id'] == member_id:
+                # make sure no duplicates
+                if member['id'] == member_id and member['username'] not in member_names:
                     username = str(member['username'])
                     member_names.append(username)
 
