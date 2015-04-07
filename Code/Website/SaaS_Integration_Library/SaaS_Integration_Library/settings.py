@@ -96,8 +96,6 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-#SECRET_KEY = 'pz2s4r$=f@n343w5qj)8$!i94gkx#7(9z1qr9c9+cnak_-in1^'
-
 """ via https://gist.github.com/ndarville/3452907
 Two things are wrong with Django's default `SECRET_KEY` system:
 
