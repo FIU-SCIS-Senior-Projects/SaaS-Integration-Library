@@ -21,8 +21,6 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-TRELLO_KEY= "36fb61b8a99b93c4cbf0b63a5f440503"
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.

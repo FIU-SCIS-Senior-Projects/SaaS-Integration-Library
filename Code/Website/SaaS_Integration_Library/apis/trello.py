@@ -1,17 +1,18 @@
-#from trello import TrelloApi
 import requests
-from itertools import izip
 import json
 import simplejson
 import pprint
+import sys
+sys.path.append("/home/adam/")
+from senior import secret
+
 #from SaaS_Integration_Library import settings
 
 class Trello(object):
     """Trello API class"""
-    TRELLO_KEY = "36fb61b8a99b93c4cbf0b63a5f440503"
 
     def __init__(self, token):
-        self.credentials = {'key': Trello.TRELLO_KEY, 'token': token}
+        self.credentials = {'key': secret.TRELLO_KEY, 'token': token}
         self.record = None
         self.boards = None
         self.cards = None

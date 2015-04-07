@@ -4,7 +4,10 @@ from django.shortcuts import render_to_response
 
 import simplejson
 
-from SaaS_Integration_Library import settings
+import sys
+sys.path.append("/home/adam/")
+from senior import secret
+
 from apis import trello
 from SIL.models import ApiCredential, Api, Call
 
@@ -16,7 +19,7 @@ def index(request):
 
 def datasource(request):
     context = RequestContext(request)
-    context_dict = {'trello_key' : settings.TRELLO_KEY}
+    context_dict = {'trello_key' : secret.TRELLO_KEY}
 
     return render_to_response('SIL/datasource.html', context_dict, context)
 
@@ -32,7 +35,7 @@ def confirmation(request, api_name):
     context_dict['username'] = user_name
 
     api = Api.objects.get(name=api_name.lower())
-    credentials = ApiCredential.objects.create(name=(api_name+' '+user_name), settings={'key': settings.TRELLO_KEY,'token': token}, api=api)
+    credentials = ApiCredential.objects.create(name=(api_name+' '+user_name), settings={'key': secret.TRELLO_KEY,'token': token}, api=api)
 
     return render_to_response('SIL/confirmation.html', context_dict, context)
 
