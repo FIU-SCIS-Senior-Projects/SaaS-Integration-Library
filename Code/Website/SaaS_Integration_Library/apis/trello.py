@@ -1,5 +1,7 @@
 import requests
 import json
+import calendar
+import datetime
 import simplejson
 import pprint
 import sys
@@ -19,30 +21,47 @@ class Trello(object):
         self.lists = None
         self.members = None
         self.labels = None
+        self.username = None
+        self.mycards = None
+        self.total_cards = 0
+        self.due_in_seven = None
+        self.cards_past_due = None
 
     def make_call(self, address):
         return requests.get(address, params=self.credentials)
+
 
     def get_records(self):
         resp = self.make_call("https://trello.com/1/members/me")
         self.record = resp.json()
         return self.record
 
+
+    def set_username(self, username):
+        self.username = username
+
+
     def get_all_boards(self):
         resp = requests.get("https://trello.com/1/members/my/boards", params=self.credentials)
         self.boards = resp.json()
         return self.boards
 
+
     def get_board(self, id):
         resp = requests.get("https://trello.com/1/boards/{board_id}".format(board_id=id), params=self.credentials)
         return resp.json()
+
 
     def get_card(self, id):
         resp = requests.get("https://trello.com/1/cards/{card_id}".format(card_id=id), params=self.credentials)
         return resp.json()
 
+
     def get_all_cards(self):
         self.cards = []
+        self.mycards = []
+        self.due_in_seven = []
+        self.cards_past_due = []
 
         #check if boards contains any boards to get board ids from
         if self.boards == None:
@@ -61,6 +80,7 @@ class Trello(object):
         # checkitemstates, descdata, idattachmentcover
         # join in other API Calls
         for card in self.cards:
+            self.total_cards += 1
             del card['labels']
             del card['pos']
             del card['manualCoverAttachment']
@@ -68,6 +88,7 @@ class Trello(object):
             del card['checkItemStates']
             del card['descData']
             del card['idAttachmentCover']
+            del card['badges']
 
             # replace idlist with list name
             list_id = card['idList']
@@ -84,7 +105,19 @@ class Trello(object):
             del card['idLabels']
             card['labelNames'] = self.get_label_names(label_ids)
 
+            # search through member names, if have mine then store in separate list
+            if self.username is not None:
+                for member_name in card['memberNames']:
+                    if member_name == self.username:
+                        self.mycards.append(card)
+
+            # add to due in seven list or add to past due list
+            if self.get_due_in_seven(card):
+                self.due_in_seven.append(card)
+
+
         return self.cards
+
 
     def get_lists(self):
         self.lists = []
@@ -100,6 +133,7 @@ class Trello(object):
                 self.lists.append(element)
 
         return self.lists
+
 
     #members for all boards
     def get_members(self):
@@ -135,6 +169,7 @@ class Trello(object):
 
         return self.labels
 
+
     def get_list_name(self, list_id):
         listName = ""
 
@@ -147,6 +182,7 @@ class Trello(object):
                 listName = list['name']
 
         return listName
+
 
     def get_member_names(self, member_ids):
         member_names = []
@@ -164,6 +200,7 @@ class Trello(object):
 
         return member_names
 
+
     def get_label_names(self, label_ids):
         label_names = []
 
@@ -178,3 +215,40 @@ class Trello(object):
                     label_names.append(json.dumps(label['name']))
 
         return label_names
+
+
+    def get_cards_assigned_to_me(self):
+        if self.mycards is None:
+            self.get_all_cards()
+
+        return self.mycards
+
+
+    def get_total_cards(self):
+        if self.cards is None:
+            self.get_all_cards()
+
+        return self.total_cards
+
+
+    #TODO get due in 7 days, date on card example: 2015-04-20T16:00:00.000Z
+    def get_due_in_seven(self, card):
+        if card['due'] is not None:
+            cur_date = datetime.date(datetime.datetime.now().year, datetime.datetime.now().month, datetime.datetime.now().day)
+            due = card['due'][:10].split('-')
+            due_year = int(due[0])
+            due_month = int(due[1])
+            due_day = int(due[2])
+            due_date = datetime.date(due_year, due_month, due_day)
+            date_diff = due_date-cur_date
+
+            if date_diff.days <= 7:
+                if date_diff.days < 0:
+                    self.cards_past_due.append(card)
+                    return False
+                return True
+
+        return False
+
+
+    #TODO get past due

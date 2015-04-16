@@ -7,6 +7,7 @@ import simplejson
 import sys
 sys.path.append("/home/adam/")
 from senior import secret
+import datetime
 
 from apis import trello
 from SIL.models import ApiCredential, Api, Call
@@ -91,6 +92,8 @@ def apicall(request, api_cred, action_name):
     action = action_name.replace('_', ' ')          #name to display
     cred = ApiCredential.objects.get(name=api_cred.replace('_', ' '))
 
+    user_name = api_cred.split('_')[1]
+
     context_dict = {'action_name': action_name}
 
     try:
@@ -101,6 +104,7 @@ def apicall(request, api_cred, action_name):
 
         #make more modular, name lookup
         api_obj = trello.Trello(api_tok)
+        api_obj.set_username(user_name)
 
         #delete it to make more recent call
         Call.objects.filter(name=action_name).delete()
@@ -111,11 +115,22 @@ def apicall(request, api_cred, action_name):
         context_dict['call'] = call
         context_dict['response'] = call.response
         context_dict['action'] = action.upper()
+        context_dict['card_lists'] = {}
+        context_dict['card_lists']['mycards'] = api_obj.get_cards_assigned_to_me()
+        context_dict['assigned_count'] = len(context_dict['card_lists']['mycards'])
+        context_dict['total_cards'] = api_obj.get_total_cards()
+        context_dict['card_lists']['past_due_cards'] = api_obj.cards_past_due
+        context_dict['past_due_count'] = len(context_dict['card_lists']['past_due_cards'])
+        context_dict['card_lists']['due_cards'] = api_obj.due_in_seven
+        context_dict['due_in_seven_count'] = len(context_dict['card_lists']['due_cards'])
+
 
         items = []
         for item in call.response:
             #TODO find http and make link, then append
             items.append(item)
+
+        context_dict['card_lists']['total'] = items
 
         labels = []
         for k,v in call.response[0].iteritems():
@@ -123,6 +138,12 @@ def apicall(request, api_cred, action_name):
 
         context_dict['labels'] = labels
         context_dict['items'] = items
+
+        if action_name == 'get_all_cards':
+            date = datetime.datetime.now()
+            context_dict['year'] = date.year
+            context_dict['month'] = date.month
+            context_dict['day'] = date.day
     except (Api.DoesNotExist, Call.DoesNotExist, AttributeError):
         pass
 
