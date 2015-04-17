@@ -34,7 +34,8 @@
         border: 1.5px solid #2D3239;
         border-radius: 10px;
         margin: 10%;
-        padding:  10px;
+        height: 160px;
+        min-width: 225px;
     }
     .metrics{
         margin-left: 7%;
@@ -55,6 +56,9 @@
         color:  red;
     }
 
+    .hero-unit {
+        margin-top: -3%;
+    }
 </style>
 {% endblock %}
 
@@ -81,15 +85,15 @@
                    </a>
 
                    <a href="#" id="pastdue" data-table-id="past_due_cards">
-                        <div class="span2 boxed">
-                            <h3 id="pastdue_text" align="center">Cards Past Due</h3><br>
+                        <div class="span2 boxed"><br>
+                            <h3 id="pastdue_text" align="center">Cards Past Due</h3>
                             <h1 id="pastdue_count" align="center">{{ past_due_count }}</h1>
                         </div>
                    </a>
 
                     <a href="#" id="total_cards" data-table-id="total">
-                        <div class="span2 boxed">
-                            <h3 id="total_cards_text" align="center">Total Cards</h3><br>
+                        <div class="span2 boxed"><br>
+                            <h3 id="total_cards_text" align="center">Total Cards</h3>
                             <h1 align="center">{{ total_cards}}</h1>
                         </div>
                     </a>
