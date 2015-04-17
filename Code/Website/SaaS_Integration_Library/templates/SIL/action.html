@@ -31,14 +31,30 @@
 
 <style>
     .boxed {
-        border: 1.5px solid #22BA48;
+        border: 1.5px solid #2D3239;
         border-radius: 10px;
         margin: 10%;
         padding:  10px;
     }
     .metrics{
         margin-left: 7%;
+        margin-bottom: -50%;
+        margin-top: -7%;
     }
+
+    #assigned_text, #due_text, #pastdue_text, #total_cards_text {
+                color: black;
+    }
+    #assigned_count {
+        color:  #22BA48;
+    }
+    #due_count {
+        color:  yellow;
+    }
+    #pastdue_count {
+        color:  red;
+    }
+
 </style>
 {% endblock %}
 
@@ -52,29 +68,29 @@
                 <div class="row metrics">
                    <a href="#" id="assigned" data-table-id="mycards">
                         <div class="span2 boxed">
-                                <h5 align="center">Cards Assigned To Me</h5>
-                                <h3 align="center">{{ assigned_count }}</h3>
+                                <h3 id="assigned_text" align="center">Cards Assigned To Me</h3>
+                                <h1 id="assigned_count" align="center">{{ assigned_count }}</h1>
                         </div>
                    </a>
 
                    <a href="#" id="due" data-table-id="due_cards">
                         <div class="span2 boxed">
-                            <h5 align="center">Cards Due Date In 7 Days</h5>
-                            <h3 align="center">{{ due_in_seven_count }}</h3>
+                            <h3 id="due_text" align="center">Cards Due Date In 7 Days</h3>
+                            <h1 id="due_count" align="center">{{ due_in_seven_count }}</h1>
                         </div>
                    </a>
 
                    <a href="#" id="pastdue" data-table-id="past_due_cards">
                         <div class="span2 boxed">
-                            <h5 align="center">Cards Past Due</h5>
-                            <h3 align="center">{{ past_due_count }}</h3>
+                            <h3 id="pastdue_text" align="center">Cards Past Due</h3><br>
+                            <h1 id="pastdue_count" align="center">{{ past_due_count }}</h1>
                         </div>
                    </a>
 
                     <a href="#" id="total_cards" data-table-id="total">
                         <div class="span2 boxed">
-                            <h5 align="center">Total Cards</h5>
-                            <h3 align="center">{{ total_cards}}</h3>
+                            <h3 id="total_cards_text" align="center">Total Cards</h3><br>
+                            <h1 align="center">{{ total_cards}}</h1>
                         </div>
                     </a>
                 </div> <!--/row-->

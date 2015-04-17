@@ -30,7 +30,7 @@ def confirmation(request, api_name):
     token = request.GET.get('token', '')
 
     #TODO Trello hardcoded!
-    #make request to get email, use to add to api name, i.e. allowing multiple emails for given api
+    #make request to get username, use to add to api name, i.e. allowing multiple usernames for given api
     trello_obj = trello.Trello(token)
     user_name = trello_obj.get_records()['username']
     context_dict['username'] = user_name
