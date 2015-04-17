@@ -36,6 +36,7 @@
         margin: 10%;
         height: 160px;
         min-width: 225px;
+        margin-bottom: 60px;
     }
     .metrics{
         margin-left: 7%;
@@ -102,10 +103,10 @@
         {% else %}
             <h2>Oops... Call Error</h2>
         {% endif %}
-        <br>
+
         {% if call %}
             <!--{{ response }}-->
-        <br>
+
             <!--{{ labels }}-->
         {%  for key,items in card_lists.items %}
         <div class="table{% if key != 'total' %} hide {% endif %}" id="{{key}}">
