@@ -89,6 +89,10 @@ class Trello(object):
             del card['descData']
             del card['idAttachmentCover']
             del card['badges']
+            del card['id']
+            del card['idBoard']
+            del card['email']
+            del card['shortLink']
 
             # replace idlist with list name
             list_id = card['idList']
@@ -106,10 +110,12 @@ class Trello(object):
             card['labelNames'] = self.get_label_names(label_ids)
 
             # search through member names, if have mine then store in separate list
-            if self.username is not None:
-                for member_name in card['memberNames']:
-                    if member_name == self.username:
-                        self.mycards.append(card)
+            if self.username is None:
+                self.set_username(self.get_records()['username'])
+
+            for member_name in card['memberNames']:
+                if member_name == self.username:
+                    self.mycards.append(card)
 
             # add to due in seven list or add to past due list
             if self.get_due_in_seven(card):
