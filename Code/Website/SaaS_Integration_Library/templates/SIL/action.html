@@ -30,22 +30,41 @@
 </script>
 
 <style>
-    .boxed {
+    .metrics{
+        margin-left: 5px;
+        margin-bottom: -50%;
+        margin-right:  5px;
+        width: 100%;
+    }
+
+     .boxed {
         border: 1.5px solid #2D3239;
         border-radius: 10px;
-        margin: 10%;
         height: 160px;
-        min-width: 225px;
-        margin-bottom: 60px;
+        min-width: 235px;
+        padding-bottom: 10%;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-right: 13.8%;
+        margin-bottom: 50px;
+        margin-top: 20px;
     }
-    .metrics{
-        margin-left: 7%;
-        margin-bottom: -50%;
-        margin-top: -7%;
+
+    .boxed-mid-right {
+        padding-top: 1%;
+        padding-bottom: 151px;
+    }
+
+    .boxed-right {
+        margin-right: -1%;
+        float: right;
+        padding-top; 10%;
+        padding-top: 1%;
+        padding-bottom: 151px;
     }
 
     #assigned_text, #due_text, #pastdue_text, #total_cards_text {
-                color: black;
+        color: black;
     }
     #assigned_count {
         color:  #22BA48;
@@ -86,14 +105,14 @@
                    </a>
 
                    <a href="#" id="pastdue" data-table-id="past_due_cards">
-                        <div class="span2 boxed"><br>
+                        <div class="span2 boxed boxed-mid-right">
                             <h3 id="pastdue_text" align="center">Cards Past Due</h3>
                             <h1 id="pastdue_count" align="center">{{ past_due_count }}</h1>
                         </div>
                    </a>
 
                     <a href="#" id="total_cards" data-table-id="total">
-                        <div class="span2 boxed"><br>
+                        <div class="span2 boxed boxed-right">
                             <h3 id="total_cards_text" align="center">Total Cards</h3>
                             <h1 align="center">{{ total_cards}}</h1>
                         </div>
