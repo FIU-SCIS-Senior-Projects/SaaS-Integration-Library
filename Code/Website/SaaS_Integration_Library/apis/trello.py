@@ -93,6 +93,7 @@ class Trello(object):
             del card['idBoard']
             del card['email']
             del card['shortLink']
+            del card['idMembersVoted']
 
             # replace idlist with list name
             list_id = card['idList']
