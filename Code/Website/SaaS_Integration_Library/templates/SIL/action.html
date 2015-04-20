@@ -41,11 +41,11 @@
         border: 1.5px solid #2D3239;
         border-radius: 10px;
         height: 160px;
-        min-width: 235px;
-        padding-bottom: 10%;
-        padding-left: 10px;
-        padding-right: 10px;
-        margin-right: 13.8%;
+
+        max-width: 235px;
+        padding-top: 1%;
+        padding-bottom: 151px;
+        margin-right: 14.2%;
         margin-bottom: 50px;
         margin-top: 20px;
     }
@@ -58,8 +58,7 @@
     .boxed-right {
         margin-right: -1%;
         float: right;
-        padding-top; 10%;
-        padding-top: 1%;
+        padding-top; 10%;;
         padding-bottom: 151px;
     }
 
@@ -92,21 +91,21 @@
                 <div class="row metrics">
                    <a href="#" id="assigned" data-table-id="mycards">
                         <div class="span2 boxed">
-                                <h3 id="assigned_text" align="center">Cards Assigned To Me</h3>
+                                <h3 id="assigned_text" align="center">Assigned To Me</h3>
                                 <h1 id="assigned_count" align="center">{{ assigned_count }}</h1>
                         </div>
                    </a>
 
                    <a href="#" id="due" data-table-id="due_cards">
                         <div class="span2 boxed">
-                            <h3 id="due_text" align="center">Cards Due In 7 Days</h3>
+                            <h3 id="due_text" align="center">Due In 7 Days</h3>
                             <h1 id="due_count" align="center">{{ due_in_seven_count }}</h1>
                         </div>
                    </a>
 
                    <a href="#" id="pastdue" data-table-id="past_due_cards">
                         <div class="span2 boxed boxed-mid-right">
-                            <h3 id="pastdue_text" align="center">Cards Past Due</h3>
+                            <h3 id="pastdue_text" align="center">Past Due</h3>
                             <h1 id="pastdue_count" align="center">{{ past_due_count }}</h1>
                         </div>
                    </a>
