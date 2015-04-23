@@ -13,9 +13,9 @@
 -------
 
 ##Table of Contents
-1. [Introduction](#introduction)
+1. [Introduction](#1-introduction)
 
-  1.1 [Problem Definition](#Problem Definition)
+  1.1 [Problem Definition](#1.1-Problem Definition)
 
   1.2 Background
 
