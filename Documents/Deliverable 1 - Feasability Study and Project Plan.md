@@ -13,7 +13,7 @@
 -------
 
 ##Table of Contents
-1. [Introduction](#Introduction)
+1. [Introduction](#introduction)
 
   1.1 [Problem Definition](#Problem Definition)
 
@@ -47,7 +47,7 @@
 
     3.1.1 Project Personnel Organization
 
-    .1.2 Hardware and Software Resources
+    3.1.2 Hardware and Software Resources
 
   3.2 Identification of Tasks, Milestones, and Deliverables
 
