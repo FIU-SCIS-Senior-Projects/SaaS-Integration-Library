@@ -13,11 +13,11 @@
 -------
 
 ##Table of Contents
-1. [Introduction](#Introduction)
-  1.1 [Problem Definition](#Problem Definition)
-  1.2 Background
-  1.3 Definition, Acronyms, and Abbreviations
-  1.4 Overview of Document
+1. [Introduction](#1. Introduction)
+  * [Problem Definition](#Problem Definition)
+  * Background
+  * Definition, Acronyms, and Abbreviations
+  * Overview of Document
 2. Feasibility Study
   2.1 Description of Current System
   2.2 Purpose of New System
