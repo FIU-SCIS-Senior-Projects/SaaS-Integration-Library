@@ -4,11 +4,87 @@
 #####Adam Merille
 #####Professor Masoud Sadjadi
 
+
+-------
+
+##Abstract
+
+
+-------
+
+##Table of Contents
+1. [Introduction](#1-introduction)
+
+  1.1 [Problem Definition](#11-problem-definition)
+
+  1.2 [Scope of System](#12-scope-of-system)
+
+  1.3 [Definition, Acronyms, and Abbreviations](#13-definition-acronyms-and-abbreviations)
+
+  1.4 [Overview of Document](#14-overview-of-document)
+
+2. [Current System](#2-current-system)
+
+3. [Project Plan](#3-project-plan)
+
+  3.1 [Project Organization](#31-project-organization)
+
+  3.2 [Work Breakdown](#32-work-breakdown)
+
+  3.3 [Cost Estimate](#33-cost-estimate)
+
+4. [Proposed System Requirements](#4-proposed-system-requirements)
+
+  4.1 [Functional Requirements](#41-functional-requirements)
+
+  4.2 [Analysis of System Requirements](#42-analysis-of-system-requirements)
+
+    4.2.1 [Scenarios](#421-scenarios)
+
+    4.2.2 [Use Case Model](#422-use-case-model)
+
+    4.2.3 [Static Model](#423-static-model)
+
+    4.2.4 [Dynamic Model](#424-dynamic-model)
+
+5. [Glossary](#5-glossary)
+
+6. [Appendix](#6-appendix)
+  6.1 [Appendix A](#61-appendix-a---complete-use-cases)
+
+  6.2 [Appendix B](#62-appendix-b---use-case-diagram)
+
+  6.3 [Appendix C](#63-appendix-c---static-uml-diagrams)
+
+  6.4 [Appendix D](#64-appendix-d---dynamic-uml-diagrams)
+
+  6.5 [Appendix E](#65-appendix-e---user-interface-designs)
+
+  6.6 [Appendix F](#66-appendix-f---diary-of-meetings-and-tasks)
+
+7. [References](#7-references)
+
+-------
+
 ##1. Introduction
+
+###1.1 Problem Definition
+
+###1.2 Scope of System
+
+###1.3 Definition, Acronyms, and Abbreviations
+
+###1.4 Overview of Document
 
 ##2. Current System
 
 ##3. Project Plan
+
+###3.1 Project Organization
+
+###3.2 Work Breakdown
+
+###3.3 Cost Estimate
 
 ##4. Proposed System Requirements
 
@@ -20,6 +96,7 @@
 
 ####4.2.2 Use Case Model
 ![Image of Use Case Diagram](images/SILUseCaseDiagram.png?raw=true)
+
 ####4.2.3 Static Model
 
 ####4.2.4 Dynamic Model
@@ -219,3 +296,5 @@ __
 Overflow hidden css element
 Use oauth for Trello
 send javascript issues to Orland and work on fixing
+
+##7. References
