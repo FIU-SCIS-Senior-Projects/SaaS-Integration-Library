@@ -6,3 +6,4 @@ wsgiref==0.1.2
 mock==1.0.1
 python-social-auth==0.2.2
 oauthlib==0.7.2
+redis-server==3.0.0

@@ -42,10 +42,11 @@ class TrelloTestCase(unittest.TestCase):
     #     print("User Test Board:")
     #     pprint.pprint(self.trello.get_board(TrelloTestCase.TEST_BOARD_ID))
     #
-    # def test04_getAllCards(self):
-    #     print ("Cards:")
-    #     pprint.pprint(self.trello.get_all_cards())
-    #
+
+    def test04_getAllCards(self):
+        print ("Cards:")
+        pprint.pprint(self.trello.get_all_cards())
+
     # def test05_getCard(self):
     #     print("User Test Card:")
     #     pprint.pprint(self.trello.get_card(TrelloTestCase.TEST_CARD_ID))
