@@ -153,8 +153,11 @@ Alternatives for databases:
 ###4.1 Appendix A - Project Schedule
 
 ####4.1.1 Spring 2015 Gantt Chart
+
+Part 1:
 ![Image of First Half of Gantt Chart](images/Gantt1-10.png?raw=true)
 
+Part 2:
 ![Image of First Half of Gantt Chart](images/Gantt10-18.png?raw=true)
 
 ###4.2 Appendix B - Feasibility Matrix
@@ -179,7 +182,7 @@ Security | Standard **3**| Advanced **4** | Standard **3**
 Reliability | Standard, a little slow **3** | Has some funcionality issues **2** | Database is single file makes it easily portable **4**
 Integrationalability | Not quite as popular, has integration with Django **3** | Most popular and used almost everywhere **4** | Comes preloaded with Django for python **5**
 Resources | Strong community **3** | Lots **4** | Probably some **2**
-Total points | **12** | **14** | **14** :star: Due to Django integration
+Total points | **12** | **14** | **14** :star: (Due to Django integration)
 
 ###4.3 Appendix C - Cost Matrix
 
@@ -203,6 +206,122 @@ Operation | $0 | $0 | $0
 Total | $0 | $0 | $0
 
 ###4.4 Appendix D - Diary of Meetings
+
+**Diary Entry** - January 22 2015
+
+**Location:** BrightGauge
+
+**Start time:** 10:00 AM
+
+**End time:** 11:30 AM
+
+**In attendance:** Adam, Brian, Orlando, Steve
+
+**Agenda:** Product introduction, User stories discussion, why this product
+
+**Summary of discussion:** Discussed use cases pertaining to SaaS Integration Library, particularly Trello data source retrieval by means of authentication and API calls.
+
+**Assigned tasks:** Adam - Research Trello API, begin working on documentation and Mingle set up
+____
+
+
+**Diary Entry** - January 29 2015
+
+**Location:** BrightGauge
+
+**Start time:** 10:00 AM
+
+**End time:** 11:30 AM
+
+**In attendance:** Adam, Brian, Orlando, Steve
+
+**Agenda:** Go over possible architecture, user interface envisioned by product owner
+
+**Summary of discussion:** Mapped out basic data management system, user interface design, git branching
+
+**Assigned tasks:** Adam - Continue documentation, learn about Django	
+____
+
+
+**Diary Entry** - February 12,  2015
+
+**Location:** BrightGauge
+
+**Start time:** 3:30 PM
+
+**End time:** 4:00 PM
+
+**In attendance:** Adam, Brian, Orlando, Steve
+
+**Agenda:** Sprint Review
+
+**Summary of discussion:** 
+User Stories:
+	attribute/fields list
+	high level view without data
+	Highcharts
+
+Next time:
+	more code reviews
+	demo at end of sprint
+
+**Assigned tasks:** Adam - 
+	--variables in init
+	--no camel case
+	--format strings
+	--requests.get takes params
+	--checks inside of get all cards
+	try, except
+	move KEY to Settings
+__
+
+
+**Diary Entry** - February 25,  2015
+
+**Location:** BrightGauge
+
+**Start time:** 3:30 PM
+
+**End time:** 4:00 PM
+
+**In attendance:** Adam, Brian, Orlando, Steve
+
+**Agenda:** Sprint Review
+
+**Summary of discussion:** shortcut to render_to_response, check newer docs called render()
+
+__iexact() case insensitive searching
+
+views - apicall - just delete query no need to check
+
+no need to change response to json, keep as data obj
+
+python mock library
+
+get list of items to pass to template, then get keys() and then loop through to get items()
+
+**Assigned tasks:** Adam - above recommendations in addition to assigned user stories
+__
+
+
+**Diary Entry** - March 19,  2015
+
+**Location:** BrightGauge
+
+**Start time:** 3:30 PM
+
+**End time:** 4:00 PM
+
+**In attendance:** Adam, Brian, Orlando, Steve
+
+**Agenda:** Sprint Review
+
+**Summary of discussion:** discussed sprint review and job offer
+
+**Assigned tasks:** Adam - 
+Overflow hidden css element
+Use oauth for Trello
+send javascript issues to Orland and work on fixing
 
 
 ######[top](#deliverable-1---feasibility-study-and-project-plan)
