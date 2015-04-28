@@ -70,12 +70,17 @@
 
 ###1.1 Problem Definition
 
+    The software company Brighgauge would like a platform to test certain datasources. Namely they want the data to come back in a formatted way which would enable them to dive into the details and decide the viability of including that datasource on their platform.
+
 ###1.2 Background
 
+    Brightgauge is a company that builds business intelligence solutions for IT Service Providers and Managed Service Providers. Essentially they enable data sources to be linked to a dashboard which allows the users to then create visualization of of that data that can be updated in real time. The Software-as-a-Service Integration Library (SaaS Integegration Library) is an exploratory tool for them to see how they might integrate new datasources as well as test possible new features of data display visualizations.
+
 ###1.3 Definition, Acronyms, and Abbreviations
+    **SaaS**: Software-as-a-Service is defined as a software licensing model that is subscription based. It enables a user to have access to some business application that they can use for their own unique purposes.
 
 ###1.4 Overview of Document
-
+     This document gives a big picture view of the viability and purpose of the system as well as the plan to complete the project. The following section discusses the feasibility of the project, including user requirements and alernative solutions. After that, in section 3, the project organization is discussed in terms of a timeline and deliverables to be accomplished.
 
 ######[top](#deliverable-1---feasibility-study-and-project-plan)
 -------
@@ -84,9 +89,15 @@
 
 ###2.1 Description of Current System
 
+    As of right now there is now current system in place for this project. This is version zero and so is a foray into the possibility of this testing ground and the features it might contain. 
+
 ###2.2 Purpose of New System
 
+    This new system will allow the company, Brightgauge, to judge whether a data source that might be used by their clients, or future clients, is a viable addition to their product. The big picture is to see what data can be retrieved and if that data would enable the clients to make better decisions or to see how they stand in the current environment.
+
 ###2.3 High-Level User Requirements
+
+
 
 ###2.4 Alternative Solutions
 
