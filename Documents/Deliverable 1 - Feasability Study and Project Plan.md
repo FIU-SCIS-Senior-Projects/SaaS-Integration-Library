@@ -159,11 +159,10 @@ Feasiblity Matrix for website construction:
 
 Criteria | Java | PHP | Python
 ---------|------|-----|-------
-Speed to get going | Java websites abound, but a little weighty
-**3** |  |
-Teammate knowledge |  |  | 
-Frameworks |  |  | 
-Resources |  |  |
+Speed to get going | Websites abound, but a little weighty **3** | Highly verbose, still a standard **2**  | Usually considered a get-up-and-go type **4**
+Teammate knowledge | General knowledge, but research needed for creating website in Java **3** | Limited knowledge, lots of research probably needed **2**  | Less knowledge than Java, but easy to pick up (teamat brightgauge has knowledge) **3**
+Frameworks | Probably very useful libraries **3** | not sure, expect some libraries **3** | Experience with flask, team uses Django **4**
+Resources | tons **3** | tons **3** | not as many as others, still has tutorials **3**
 Total points |  |  |
 
 
