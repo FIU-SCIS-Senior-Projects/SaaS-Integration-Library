@@ -161,8 +161,8 @@ Criteria | Java | PHP | Python
 ---------|------|-----|-------
 Speed to get going | Websites abound, but a little weighty **3** | Highly verbose, still a standard **2**  | Usually considered a get-up-and-go type **4**
 Teammate knowledge | General knowledge, but research needed for creating website in Java **3** | Limited knowledge, lots of research probably needed **2**  | Less knowledge than Java, but easy to pick up (teamat brightgauge has knowledge) **3**
-Frameworks | Probably very useful libraries **3** | not sure, expect some libraries **3** | Experience with flask, team uses Django **4**
-Resources | tons **3** | tons **3** | not as many as others, still has tutorials **3**
+Frameworks | Probably very useful libraries **3** | Not sure, expect some libraries **3** | Experience with flask, team uses Django **4**
+Resources | Tons **3** | Tons **3** | Not as many as others, still has tutorials **3**
 Total points | **12** | **10** | **14** :star:
 
 
@@ -170,10 +170,10 @@ Feasiblity Matrix for database choice:
 
 Criteria | PostgreSQL | MySQL | SQLite
 ---------|------|-----|-------
-Security | | |
-Reliability | | |
-Integrationalability | | |
-Resources | | |
+Security | Standard **3**| Advanced **4** | Standard **3**
+Reliability | Standard, a little slow **3** | Has some funcionality issues **2** | Database is single file makes it easily portable **4**
+Integrationalability | Not quite as popular, has integration with Django **2** | Most popular and used almost everywhere **4** | Comes preloaded with Django for python **5**
+Resources | Strong community **3** | Lots **4** | Probably some **2**
 Total points | | |
 
 ###4.3 Appendix C - Cost Matrix
