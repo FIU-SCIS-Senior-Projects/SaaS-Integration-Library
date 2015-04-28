@@ -174,7 +174,7 @@ Security | Standard **3**| Advanced **4** | Standard **3**
 Reliability | Standard, a little slow **3** | Has some funcionality issues **2** | Database is single file makes it easily portable **4**
 Integrationalability | Not quite as popular, has integration with Django **2** | Most popular and used almost everywhere **4** | Comes preloaded with Django for python **5**
 Resources | Strong community **3** | Lots **4** | Probably some **2**
-Total points | | |
+Total points | **11** | **14** | **14** :star: Due to Django integration
 
 ###4.3 Appendix C - Cost Matrix
 
