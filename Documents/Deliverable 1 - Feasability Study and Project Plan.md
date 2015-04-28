@@ -155,7 +155,7 @@ Alternatives for databases:
 ###4.2 Appendix B - Feasibility Matrix
 Maximum points possible for a given criteria is 5.
 
-Feasiblity Matrix for website construction:
+####4.2.1 Feasiblity Matrix for website construction
 
 Criteria | Java | PHP | Python
 ---------|------|-----|-------
@@ -166,17 +166,36 @@ Resources | Tons **3** | Tons **3** | Not as many as others, still has tutorials
 Total points | **12** | **10** | **14** :star:
 
 
-Feasiblity Matrix for database choice:
+####4.2.2 Feasiblity Matrix for database choice
 
 Criteria | PostgreSQL | MySQL | SQLite
 ---------|------|-----|-------
 Security | Standard **3**| Advanced **4** | Standard **3**
 Reliability | Standard, a little slow **3** | Has some funcionality issues **2** | Database is single file makes it easily portable **4**
-Integrationalability | Not quite as popular, has integration with Django **2** | Most popular and used almost everywhere **4** | Comes preloaded with Django for python **5**
+Integrationalability | Not quite as popular, has integration with Django **3** | Most popular and used almost everywhere **4** | Comes preloaded with Django for python **5**
 Resources | Strong community **3** | Lots **4** | Probably some **2**
-Total points | **11** | **14** | **14** :star: Due to Django integration
+Total points | **12** | **14** | **14** :star: Due to Django integration
 
 ###4.3 Appendix C - Cost Matrix
+
+####4.3.1 Cost Matrix for website construction
+Website is hosted on FIU servers.
+
+Criteria | Java | PHP | Python
+---------|------|-----|-------
+Infrastructure | $0 | $0 | $0
+Development | $0 | $0 | $0
+Operation | $0 | $0 | $0
+Total | $0 | $0 | $0
+
+####4.3.1 Cost Matrix for website construction
+
+Criteria | PostgreSQL | MySQL | SQLite
+---------|------|-----|-------
+Infrastructure | $0 | $0 | $0
+Development | $0 | $0 | $0
+Operation | $0 | $0 | $0
+Total | $0 | $0 | $0
 
 ###4.4 Appendix D - Diary of Meetings
 
