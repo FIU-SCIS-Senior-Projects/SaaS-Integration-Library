@@ -329,5 +329,8 @@ send javascript issues to Orland and work on fixing
 
 ##5. References
 
+* Draw IO: https://www.draw.io/ used for all diagrams except gantt.
+
+* Tom's Planner: http://www.tomsplanner.com/ used for gantt chart creation
 
 ######[top](#deliverable-1---feasibility-study-and-project-plan)
