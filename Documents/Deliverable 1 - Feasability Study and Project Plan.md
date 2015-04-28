@@ -152,6 +152,11 @@ Alternatives for databases:
 
 ###4.1 Appendix A - Project Schedule
 
+####4.1.1 Spring 2015 Gantt Chart
+![Image of First Half of Gantt Chart](images/Gantt1-10.png?raw=true)
+
+![Image of First Half of Gantt Chart](images/Gantt10-18.png?raw=true)
+
 ###4.2 Appendix B - Feasibility Matrix
 Maximum points possible for a given criteria is 5.
 
