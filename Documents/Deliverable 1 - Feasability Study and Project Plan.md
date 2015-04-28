@@ -108,7 +108,7 @@ This new system will allow the company, Brightgauge, to judge whether a data sou
 
 ###2.4 Alternative Solutions
 
-Refer to appendices [B](#42-appendix-b---feasibility-matrix) and [C](#42-appendix-b---cost-matrix) for the feasibility and cost matrices respectively.
+Refer to appendices [B](#42-appendix-b---feasibility-matrix) and [C](#43-appendix-c---cost-matrix) for the feasibility and cost matrices respectively.
 
 ####2.4.1 Description of Alternatives
 
@@ -153,14 +153,27 @@ Alternatives for databases:
 ###4.1 Appendix A - Project Schedule
 
 ###4.2 Appendix B - Feasibility Matrix
+Maximum points possible for a given criteria is 5.
 
 Feasiblity Matrix for website construction:
 
 Criteria | Java | PHP | Python
 ---------|------|-----|-------
-Speed to get going | | |
-Teammate knowledge | | |
-Frameworks | | |
+Speed to get going | Java websites abound, but a little weighty
+**3** |  |
+Teammate knowledge |  |  | 
+Frameworks |  |  | 
+Resources |  |  |
+Total points |  |  |
+
+
+Feasiblity Matrix for database choice:
+
+Criteria | PostgreSQL | MySQL | SQLite
+---------|------|-----|-------
+Security | | |
+Reliability | | |
+Integrationalability | | |
 Resources | | |
 Total points | | |
 
