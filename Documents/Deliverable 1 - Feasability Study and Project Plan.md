@@ -163,7 +163,7 @@ Speed to get going | Websites abound, but a little weighty **3** | Highly verbos
 Teammate knowledge | General knowledge, but research needed for creating website in Java **3** | Limited knowledge, lots of research probably needed **2**  | Less knowledge than Java, but easy to pick up (teamat brightgauge has knowledge) **3**
 Frameworks | Probably very useful libraries **3** | not sure, expect some libraries **3** | Experience with flask, team uses Django **4**
 Resources | tons **3** | tons **3** | not as many as others, still has tutorials **3**
-Total points |  |  |
+Total points | **12** | **10** | **14** :star:
 
 
 Feasiblity Matrix for database choice:
