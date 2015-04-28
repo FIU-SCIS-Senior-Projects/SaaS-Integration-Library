@@ -5,6 +5,10 @@
 #####Professor Masoud Sadjadi
 
 
+
+
+#######Copyright :copyright: SaaS Integration Library Team 
+
 -------
 
 ##Abstract
@@ -273,7 +277,7 @@ Next time:
 	--checks inside of get all cards
 	try, except
 	move KEY to Settings
-__
+____
 
 
 **Diary Entry** - February 25,  2015
@@ -301,7 +305,7 @@ python mock library
 get list of items to pass to template, then get keys() and then loop through to get items()
 
 **Assigned tasks:** Adam - above recommendations in addition to assigned user stories
-__
+____
 
 
 **Diary Entry** - March 19,  2015
@@ -321,7 +325,43 @@ __
 **Assigned tasks:** Adam - 
 Overflow hidden css element
 Use oauth for Trello
-send javascript issues to Orland and work on fixing
+send javascript issues to Orlando and work on fixing
+____
+
+
+**Diary Entry** - April 2,  2015
+
+**Location:** BrightGauge
+
+**Start time:** 3:30 PM
+
+**End time:** 4:00 PM
+
+**In attendance:** Adam, Brian, Orlando, Steve
+
+**Agenda:** Sprint Review
+
+**Summary of discussion:** discussed sprint review
+
+**Assigned tasks:** Adam - Footer, move css to dedicated folder, rm footer line, Datatables js,  grab labels out of all calls (e.g. get all cards, get lists)
+____
+
+
+**Diary Entry** - April 16,  2015
+
+**Location:** BrightGauge
+
+**Start time:** 3:30 PM
+
+**End time:** 4:00 PM
+
+**In attendance:** Adam, Brian, Orlando, Steve
+
+**Agenda:** Sprint Review
+
+**Summary of discussion:** discussed sprint review
+
+**Assigned tasks:** Adam - work on dynamic spacing of divs for metrics on get all cards page
 
 
 ######[top](#deliverable-1---feasibility-study-and-project-plan)
@@ -332,5 +372,6 @@ send javascript issues to Orland and work on fixing
 * Draw IO: https://www.draw.io/ used for all diagrams except gantt.
 
 * Tom's Planner: http://www.tomsplanner.com/ used for gantt chart creation
+
 
 ######[top](#deliverable-1---feasibility-study-and-project-plan)
