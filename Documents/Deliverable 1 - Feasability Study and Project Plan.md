@@ -99,11 +99,30 @@ This new system will allow the company, Brightgauge, to judge whether a data sou
 
 ###2.3 High-Level User Requirements
 
-
+* The system shall enable a user to add a datasource, namely via Trello.
+* The system shall allow the user to add multiple accounts from the same resource.
+* The system shall make a calls to get labels, get cards, get lists, get boards, and get members from Trello.
+* The system shall clean the data before displaying the results in a table format.
+* The system shall allow for specific filtering with the get cards request into getting the users cards, cards due in 7 days, and cards past due.
+* The system shall secure the credential information in a storage format that requires password protection.
 
 ###2.4 Alternative Solutions
 
+Refer to appendices [B](#42-appendix-b---feasibility-matrix) and [C](#42-appendix-b---cost-matrix) for the feasibility and cost matrices respectively.
+
 ####2.4.1 Description of Alternatives
+
+Alternatives for website construction:
+
+  1. Java
+  2. PHP
+  3. Python
+
+Alternatives for databases:
+
+  1. PostgreSQL
+  2. MySQL
+  3. SQLite
 
 ####2.4.2 Selection Criteria
 
@@ -134,6 +153,16 @@ This new system will allow the company, Brightgauge, to judge whether a data sou
 ###4.1 Appendix A - Project Schedule
 
 ###4.2 Appendix B - Feasibility Matrix
+
+Feasiblity Matrix for website construction:
+
+Criteria | Java | PHP | Python
+---------|------|-----|-------
+Speed to get going | | |
+Teammate knowledge | | |
+Frameworks | | |
+Resources | | |
+Total points | | |
 
 ###4.3 Appendix C - Cost Matrix
 
