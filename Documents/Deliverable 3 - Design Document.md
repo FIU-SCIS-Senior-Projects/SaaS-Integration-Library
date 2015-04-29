@@ -91,7 +91,7 @@ This document dives into the system design first via chapter 2. That chapter cov
 The main architecture for the system will be coming from the Django framework which uses a variation on Model-View-Controller. Namely it does away with controller and uses a Model-View-Template architecture. There is some discussion as to whether the framework itself acts as a controller with url mappings and such. Behind the scenes there will be some pipe and filter architecture for the various APIs and the calls they allow. As well as the client portion of the server-client architecture with the third party APIs.
 
 **Package Diagram**
-![Package Diagram](#images/PackageDiagram.jpg?raw=true)
+![Package Diagram](images/PackageDiagram.jpg?raw=true)
 
 ###2.2 Subsystem Decomposition
 
