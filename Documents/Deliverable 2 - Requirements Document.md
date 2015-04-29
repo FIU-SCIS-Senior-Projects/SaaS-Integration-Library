@@ -167,7 +167,12 @@ This chapter discusses the requirements asked for by the product owner and perfo
 
 ![Image of View Data Source Sequence Diagram](images/CreateDataSourceSequence.jpg?raw=true)
 
-![Image of Get My Cards Sequence Diagram](images/FilterGetAllCards.jpg?raw=true)
+![Image of Get My Cards Sequence Diagram](images/FilterGetMyCards.jpg?raw=true)
+
+![Image of Get Due in Seven Sequence Diagram](images/FilterGetDueinSevenCards.jpg?raw=true)
+
+![Image of Get Past Due Sequence Diagram](images/FilterGetPastDueCards.jpg?raw=true)
+
 
 ######[top](#deliverable-2---requirements-document)
 -------
@@ -233,15 +238,63 @@ Step 4: System redirects to confirmation page.
 ____
 
 
-**Title:**
+**Title:** Get My Cards
 
-**Description:** 
+**Description:** Filter to get cards only for user from the get_all_cards method (which returns all cards user can see)
 
-**Actor:**
+**Actor:**  SaaS-Integration-Library user (SIL user)
 
-**Preconditions:**
+**Preconditions:** The user has selected the call "Get all cards" from the dataset and is on the "Get all cards" page
 
-**Postconditions:**
+**Steps:** 
+
+Step 1: The user clicks the metric which says "My Cards"
+
+Step 2: The system filters the cards
+
+Step 3: The system reloads the table 
+
+**Postconditions:** The table updates and displays only the cards associated with the user
+____
+
+
+**Title:** Get Due in Seven
+
+**Description:** Filter to get cards that are due in seven days from the get_all_cards method (which returns all cards user can see)
+
+**Actor:**  SaaS-Integration-Library user (SIL user)
+
+**Preconditions:** The user has selected the call "Get all cards" from the dataset and is on the "Get all cards" page
+
+**Steps:** 
+
+Step 1: The user clicks the metric which says "Due in Seven"
+
+Step 2: The system filters the cards
+
+Step 3: The system reloads the table 
+
+**Postconditions:** The table updates and displays only the cards due in seven days
+____
+
+
+**Title:** Get Past Due
+
+**Description:** Filter to get cards which are past due from the get_all_cards method (which returns all cards user can see)
+
+**Actor:**  SaaS-Integration-Library user (SIL user)
+
+**Preconditions:** The user has selected the call "Get all cards" from the dataset and is on the "Get all cards" page
+
+**Steps:** 
+
+Step 1: The user clicks the metric which says "Past Due"
+
+Step 2: The system filters the cards
+
+Step 3: The system reloads the table 
+
+**Postconditions:** The table updates and displays only the cards which are past due
 
 
 ###6.2 Appendix B - Use Case Diagram
@@ -256,7 +309,11 @@ ____
 
 ![Image of View Data Source Sequence Diagram](images/CreateDataSourceSequence.jpg?raw=true)
 
-![Image of Get My Cards Sequence Diagram](images/FilterGetAllCards.jpg?raw=true)
+![Image of Get My Cards Sequence Diagram](images/FilterGetMyCards.jpg?raw=true)
+
+![Image of Get Due in Seven Sequence Diagram](images/FilterGetDueinSevenCards.jpg?raw=true)
+
+![Image of Get Past Due Sequence Diagram](images/FilterGetPastDueCards.jpg?raw=true)
 
 ###6.5 Appendix E - User Interface Designs
 
@@ -328,7 +385,7 @@ Next time:
 	--checks inside of get all cards
 	try, except
 	move KEY to Settings
-__
+____
 
 
 **Diary Entry** - February 25,  2015
@@ -356,7 +413,7 @@ python mock library
 get list of items to pass to template, then get keys() and then loop through to get items()
 
 **Assigned tasks:** Adam - above recommendations in addition to assigned user stories
-__
+____
 
 
 **Diary Entry** - March 19,  2015
@@ -377,12 +434,51 @@ __
 Overflow hidden css element
 Use oauth for Trello
 send javascript issues to Orlando and work on fixing
+____
+
+
+**Diary Entry** - April 2,  2015
+
+**Location:** BrightGauge
+
+**Start time:** 3:30 PM
+
+**End time:** 4:00 PM
+
+**In attendance:** Adam, Brian, Orlando, Steve
+
+**Agenda:** Sprint Review
+
+**Summary of discussion:** discussed sprint review
+
+**Assigned tasks:** Adam - Footer, move css to dedicated folder, rm footer line, Datatables js,  grab labels out of all calls (e.g. get all cards, get lists)
+____
+
+
+**Diary Entry** - April 16,  2015
+
+**Location:** BrightGauge
+
+**Start time:** 3:30 PM
+
+**End time:** 4:00 PM
+
+**In attendance:** Adam, Brian, Orlando, Steve
+
+**Agenda:** Sprint Review
+
+**Summary of discussion:** discussed sprint review
+
+**Assigned tasks:** Adam - work on dynamic spacing of divs for metrics on get all cards page
 
 
 ######[top](#deliverable-2---requirements-document)
 -------
 
 ##7. References
+
+* Draw IO: https://www.draw.io/ used for all diagrams.
+
 
 ######[top](#deliverable-2---requirements-document)
 -------
