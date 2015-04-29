@@ -178,6 +178,7 @@ The database altervatives will be judged according to:
 **Website Construction Analysis:**
 
 1. Java
+
 Pros | Cons
 -----|-----
 Lots of experience | Little experience with Java websites
