@@ -129,8 +129,69 @@ Alternatives for databases:
   3. SQLite
 
 ####2.4.2 Selection Criteria
+The web construction alternatives will be judged according to:
+
+* Speed to get going
+  * How long does it take to get website up and running?
+  * How many different resources are needed to get it up and running?
+  * Is the process straighforward?
+
+* Teammate knowledge 
+  * How much of the language does the team know?
+  * Does that knowledge extend to using the language for web application creation?
+  * How long would it take to get up to speed?
+
+* Frameworks 
+  * Does the language have frameworks that will help speed the process up?
+  * Does the language have libraries that make the process easier?
+  * How difficult is it take to use the framework?
+  
+* Resources
+  * How many avenues to get help does this language offer?
+  * Does the language have good documentation references?
+  * Can we leverage other people's knowledge of the language?
+
+The database altervatives will be judged according to:
+
+* Security 
+  * Is there a secure way to access the data?
+  * Does the data storage allow for hashing?
+  * Does the data storage come with security installed or are there third party alternatives?
+
+* Reliability 
+  * Is it easy to retrieve and store the data?
+  * Is it easy to create redundancy with this data storage?
+  * Does the data storage have a low mean time to failure?
+  
+* Integrationalability 
+  * Will the data storage work with any of the languages out of the box?
+  * How much work is needed to access the data storage within the lanaguage?
+  * Is there a trade off for ease of use vs functionality?
+  
+* Resources 
+  * How many avenues to get help/learn does the data storage offer?
+  * Does the data storage mechanism have good documentation?
+  * Have we used or know anyone who has used the data storage mechanism?
 
 ####2.4.3 Analysis of Alternatives
+
+**Website Construction Analysis:**
+
+1. Java
+  Pros | Cons
+  -----|-----
+  Lots of experience | Little experience with Java websites
+  Lots of resouces | Will probably have to build certain things
+  Highly scalable for web | 
+
+2. PHP
+3. Python
+
+**Database Analysis:**
+
+1. PostgreSQL
+2. MySQL
+3. SQLite
 
 ###2.5 Recommendations
 
