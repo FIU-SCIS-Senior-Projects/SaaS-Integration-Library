@@ -173,7 +173,7 @@ The following are various scenarios that may take place on the project.
 ![Image of Use Case Diagram](images/SILUseCaseDiagram.png?raw=true)
 
 ####4.2.3 Static Model
-See [Appendix B](#62-appendix-b---use-case-diagram) for the Class Diagram.
+See [Appendix C](#63-appendix-c---static-uml-diagrams) for the Class Diagram.
 
 The project follows a model-view-template (MVT) architecture. This is similar to the common model-view-controller pattern used for many websites. Particular differences are that the controller aspect is handled by the Django framework and that the "view" has a different function. The "view" in MVT decides what things get shown. The templates in this architecture are the renderers of how things get shown. There is also a backend class to deal with the Trello API.
 
