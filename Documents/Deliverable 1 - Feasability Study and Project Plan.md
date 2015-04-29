@@ -232,11 +232,11 @@ Comes preloaded with Django |
 
 ###2.5 Recommendations
 
-    Based on the above analysis and through discussion with members of Brightgauge there is a certain path that is being recommended. For the web application construction the choice is Python using the Django framework. For the database, PostgreSQL would like to be used but SQLite will be utilized for this first version.
+Based on the above analysis and through discussion with members of Brightgauge there is a certain path that is being recommended. For the web application construction the choice is Python using the Django framework. For the database, PostgreSQL would like to be used but SQLite will be utilized for this first version.
 
-    Python with Django has been chosen due to its ease of use, team familiarity, and shallow learning curve. It will enable the project to move forward quickly without getting stuck on the details of the website. 
+Python with Django has been chosen due to its ease of use, team familiarity, and shallow learning curve. It will enable the project to move forward quickly without getting stuck on the details of the website. 
 
-    SQLite was mainly chosen because it comes built into Django. Support for PostgreSQL is available for Django but requires some set up. The way Django works changing the database later on will not affect the current code as writing and reading are handled by the framework rather than by the programmer through his/her development code.
+SQLite was mainly chosen because it comes built into Django. Support for PostgreSQL is available for Django but requires some set up. The way Django works changing the database later on will not affect the current code as writing and reading are handled by the framework rather than by the programmer through his/her development code.
 
 
 
