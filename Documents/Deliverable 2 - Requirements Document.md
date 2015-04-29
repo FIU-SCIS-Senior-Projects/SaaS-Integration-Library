@@ -173,8 +173,10 @@ The following are various scenarios that may take place on the project.
 ![Image of Use Case Diagram](images/SILUseCaseDiagram.png?raw=true)
 
 ####4.2.3 Static Model
+See [Appendix B](#62-appendix-b---use-case-diagram) for the Class Diagram.
 
-![Image of Trello Class Diagram](images/TrelloApiClassDiagram.jpg?raw=true)
+The project follows a model-view-template (MVT) architecture. This is similar to the common model-view-controller pattern used for many websites. Particular differences are that the controller aspect is handled by the Django framework and that the "view" has a different function. The "view" in MVT decides what things get shown. The templates in this architecture are the renderers of how things get shown. There is also a backend class to deal with the Trello API.
+
 
 ####4.2.4 Dynamic Model
 
@@ -314,14 +316,19 @@ Step 3: The system reloads the table
 
 ###6.4 Appendix D - Dynamic UML Diagrams
 
+**Get Data Source Sequence Diagram**
 ![Image of Get Data Source Sequence Diagram](images/GetDataSourceSequence.jpg?raw=true)
 
+**View Data Source Sequence Diagram**
 ![Image of View Data Source Sequence Diagram](images/CreateDataSourceSequence.jpg?raw=true)
 
+**Get My Cards Sequence Diagram**
 ![Image of Get My Cards Sequence Diagram](images/FilterGetMyCards.jpg?raw=true)
 
+**Get Due in Seven Sequence Diagram**
 ![Image of Get Due in Seven Sequence Diagram](images/FilterGetDueinSevenCards.jpg?raw=true)
 
+**Get Past Due Sequence Diagram**
 ![Image of Get Past Due Sequence Diagram](images/FilterGetPastDueCards.jpg?raw=true)
 
 ###6.5 Appendix E - User Interface Designs
