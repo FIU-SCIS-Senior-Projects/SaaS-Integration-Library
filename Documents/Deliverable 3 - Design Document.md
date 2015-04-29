@@ -51,6 +51,7 @@ The following design document lays out the problem the project is attempting to 
 4. [Glossary](#4-glossary)
 
 5. [Appendix](#5-appendix)
+
   5.1 [Appendix A](#61-appendix-a---use-case-diagram)
 
   5.2 [Appendix B](#62-appendix-b---use-cases)
