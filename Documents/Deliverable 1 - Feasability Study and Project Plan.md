@@ -177,7 +177,7 @@ The database altervatives will be judged according to:
 
 **Website Construction Analysis:**
 
-1. Java
+* Java
 
 Pros | Cons
 -----|-----
@@ -185,14 +185,50 @@ Lots of experience | Little experience with Java websites
 Lots of resouces | Will probably have to build certain things
 Highly scalable for web | 
 
-2. PHP
-3. Python
+* PHP
+
+Pros | Cons
+-----|-----
+Probably tons of examples | Very little experience
+Lots of resources | Extremely verbose
+ | Slightly steeper learning curve
+
+* Python
+
+Pros | Cons
+-----|-----
+Experience with language | Little experience building website with Python
+Django gets going fast | Generally considered not highly scalable
+Shallow learning curve | 
+Easy to follow tutorials |
 
 **Database Analysis:**
 
-1. PostgreSQL
-2. MySQL
-3. SQLite
+* PostgreSQL
+
+Pros | Cons
+-----|-----
+Strong Community | Performance can be slow
+Lots of third-party support | Not as popular 
+Stored procedures extensible |
+
+* MySQL
+
+Pros | Cons
+-----|-----
+Many third party tools | Reliability issues
+Many Features | Integration with some languages might be difficult
+High security |
+Scalable |
+Fast |
+
+* SQLite
+
+Pros | Cons
+-----|-----
+File based | Limited abilities
+Easy to develop with | No user management
+Comes preloaded with Django |
 
 ###2.5 Recommendations
 
