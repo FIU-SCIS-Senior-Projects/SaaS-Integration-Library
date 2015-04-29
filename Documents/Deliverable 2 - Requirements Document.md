@@ -299,6 +299,8 @@ Step 3: The system reloads the table
 
 ###6.2 Appendix B - Use Case Diagram
 
+![Image of Use Case Diagram](images/SILUseCaseDiagram.png?raw=true)
+
 ###6.3 Appendix C - Static UML Diagrams
 
 ![Image of Trello Class Diagram](images/TrelloApiClassDiagram.jpg?raw=true)
@@ -316,6 +318,20 @@ Step 3: The system reloads the table
 ![Image of Get Past Due Sequence Diagram](images/FilterGetPastDueCards.jpg?raw=true)
 
 ###6.5 Appendix E - User Interface Designs
+
+![Image of Index UI](images/IndexUI.png?raw=true)
+
+![Image of Datasource UI](images/DatasourceUI.png?raw=true)
+
+![Image of Datasets UI](images/DatasetsUI.png?raw=true)
+
+![Image of Trello Calls UI](images/TrelloCallsUI.png?raw=true)
+
+![Image of Get All Cards UI](images/GetAllCardsUI.png?raw=true)
+
+![Image of Get All Boards UI](images/GetAllBoardsUI.png?raw=true)
+
+![Image of Get My Cards UI](images/FilterMyCardsUI.png?raw=true)
 
 ###6.6 Appendix F - Diary of Meetings and Tasks
 	
