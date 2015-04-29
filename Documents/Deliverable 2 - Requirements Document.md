@@ -4,6 +4,7 @@
 #####Adam Merille
 #####Professor Masoud Sadjadi
 
+######Copyright :copyright: SaaS Integration Library Team 
 
 -------
 
@@ -71,17 +72,26 @@
 
 ###1.1 Problem Definition
 
+The software company Brighgauge would like a platform to test certain datasources. Namely they want the data to come back in a formatted way which would enable them to dive into the details and decide the viability of including that datasource on their platform.
+
 ###1.2 Scope of System
+
+The scope of the system is limited for this semester. The main goal of the product owner is to enable data retrieval from the Trello API. As such, there is not outset intention to have the system integrate multiple APIs at this time. Care will be taken to design the system in such a way that will enable future APIs to be added in a simple manner, but those may come secondary to accomplishing the goal at hand.
 
 ###1.3 Definition, Acronyms, and Abbreviations
 
+**SaaS**: Software-as-a-Service is defined as a software licensing model that is subscription based. It enables a user to have access to some business application that they can use for their own unique purposes.
+
 ###1.4 Overview of Document
 
+This document goes on to discuss the current system in place that this project will be dealing with, chapter 2. After that, a project plan is layed out which breaksdown the work and costs associated with this project. Finally, chapter 4 introduces the functional requirements and shows an analysis of those requirements. The end of this document contains a glossary and appendices to aid in understanding the situation.
 
 ######[top](#deliverable-2---requirements-document)
 -------
 
 ##2. Current System
+
+As of right now there is now current system in place for this project. This is version zero and so is a foray into the possibility of this testing ground and the features it might contain. The company has its product which integrates data sources into a dashboard to allow users to create visualizations. This exploratory tool is an aid to that product.
 
 
 ######[top](#deliverable-2---requirements-document)
@@ -91,9 +101,39 @@
 
 ###3.1 Project Organization
 
+Adam Merille will be responsible for everything for this first version. He will be writing all the documentation, creating all the diagrams and charts, setting up and creating the Django project and web app. He will also be writing the code for the api calls on the backend. He will be working on the frontend development, including HTML, CSS, and Javascript. He will be helping with the user interface design and responsible for managing the database. Lastly, he will also be writing the test cases to make sure the system functions as set out.
+
 ###3.2 Work Breakdown
+Refer to [Appendix F](#66-appendix-f---diary-of-meetings-and-tasks) for diary of meetings and tasks.
+
+Milestone | Description | Date
+-----------|-------------|-----
+1 | Feasibilty and Project Plan, Requirements Document | February 1
+2 | Design Document | April 22
+3 | Final Deliverable | April 30
 
 ###3.3 Cost Estimate
+
+**Cost for website construction**
+
+Criteria | Python
+---------|-------
+Infrastructure | $0
+Development | $0
+Operation | $0
+Total | $0
+
+**Cost for database**
+
+Criteria | SQLite
+---------|------
+Infrastructure | $0 
+Development | $0 
+Operation | $0 
+Total | $0 
+
+
+The website is hosted on FIU servers, so that cost is assumed to be included in tuition and fees. Beyond the above technologies a personal laptop may be need (about $500 - 600 should suffice), although there are great computers in the School of Computing and Information Sciences lab. As for the labor, it is a student's joy to work for free now in the hopes of earning it back later.
 
 
 ######[top](#deliverable-2---requirements-document)
@@ -101,7 +141,16 @@
 
 ##4. Proposed System Requirements
 
+This chapter discusses the requirements asked for by the product owner and performs an analysis of those requirements. The chapter dives into the different scenarios that may arise and provides a use case model for the various requirements, as well as a set of sequence diagrams.
+
 ###4.1 Functional Requirements
+
+* The system shall enable a user to add a datasource, namely via Trello.
+* The system shall allow the user to add multiple accounts from the same resource.
+* The system shall make a calls to get labels, get cards, get lists, get boards, and get members from Trello.
+* The system shall clean the data before displaying the results in a table format.
+* The system shall allow for specific filtering with the get cards request into getting the users cards, cards due in 7 days, and cards past due.
+* The system shall secure the credential information in a storage format that requires password protection.
 
 ###4.2 Analysis of System Requirements
 
@@ -111,14 +160,24 @@
 ![Image of Use Case Diagram](images/SILUseCaseDiagram.png?raw=true)
 
 ####4.2.3 Static Model
+![Image of Trello Class Diagram](images/TrelloApiClassDiagram.jpg?raw=true)
 
 ####4.2.4 Dynamic Model
+![Image of Get Data Source Sequence Diagram](images/GetDataSourceSequence.jpg?raw=true)
 
+![Image of View Data Source Sequence Diagram](images/CreateDataSourceSequence.jpg?raw=true)
+
+![Image of Get My Cards Sequence Diagram](images/FilterGetAllCards.jpg?raw=true)
 
 ######[top](#deliverable-2---requirements-document)
 -------
 
 ##5. Glossary
+**python**
+
+**django**
+
+**SaaS**: Software-as-a-Service is defined as a software licensing model that is subscription based. It enables a user to have access to some business application that they can use for their own unique purposes.
 
 
 ######[top](#deliverable-2---requirements-document)
@@ -196,6 +255,7 @@ ____
 ![Image of Get Data Source Sequence Diagram](images/GetDataSourceSequence.jpg?raw=true)
 
 ![Image of View Data Source Sequence Diagram](images/CreateDataSourceSequence.jpg?raw=true)
+
 ![Image of Get My Cards Sequence Diagram](images/FilterGetAllCards.jpg?raw=true)
 
 ###6.5 Appendix E - User Interface Designs
@@ -234,7 +294,7 @@ ____
 
 **Summary of discussion:** Mapped out basic data management system, user interface design, git branching
 
-**Assigned tasks:** Adam - Continue documentation, learn about Django		
+**Assigned tasks:** Adam - Continue documentation, learn about Django	
 ____
 
 
@@ -316,7 +376,7 @@ __
 **Assigned tasks:** Adam - 
 Overflow hidden css element
 Use oauth for Trello
-send javascript issues to Orland and work on fixing
+send javascript issues to Orlando and work on fixing
 
 
 ######[top](#deliverable-2---requirements-document)

@@ -112,8 +112,6 @@ This new system will allow the company, Brightgauge, to judge whether a data sou
 
 ###2.4 Alternative Solutions
 
-Refer to appendices [B](#42-appendix-b---feasibility-matrix) and [C](#43-appendix-c---cost-matrix) for the feasibility and cost matrices respectively.
-
 ####2.4.1 Description of Alternatives
 
 Alternatives for website construction:
@@ -174,6 +172,7 @@ The database altervatives will be judged according to:
   * Have we used or know anyone who has used the data storage mechanism?
 
 ####2.4.3 Analysis of Alternatives
+Refer to [Appendix B](#42-appendix-b---feasibility-matrix) for the feasibility matrix which contains scoring.
 
 **Website Construction Analysis:**
 
