@@ -178,11 +178,11 @@ The database altervatives will be judged according to:
 **Website Construction Analysis:**
 
 1. Java
-  Pros | Cons
-  -----|-----
-  Lots of experience | Little experience with Java websites
-  Lots of resouces | Will probably have to build certain things
-  Highly scalable for web | 
+Pros | Cons
+-----|-----
+Lots of experience | Little experience with Java websites
+Lots of resouces | Will probably have to build certain things
+Highly scalable for web | 
 
 2. PHP
 3. Python
