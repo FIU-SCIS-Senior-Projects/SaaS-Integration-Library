@@ -12,7 +12,7 @@
 -------
 
 ##Abstract
-
+The following feasibility study and project plan is an outline for what the intention of this project is. The feasibility study walks through the possible solutions, judging criteria, and decisions on which solutions seem a best fit. The project plan points out who will be doing what for the project, as well as a timeline, and any requirements in order to develop the project.
 
 -------
 
@@ -249,9 +249,31 @@ SQLite was mainly chosen because it comes built into Django. Support for Postgre
 
 ####3.1.1 Project Personnel Organization
 
+Adam Merille will be responsible for everything for this first version. He will be writing all the documentation, creating all the diagrams and charts, setting up and creating the Django project and web app. He will also be writing the code for the api calls on the backend. He will be working on the frontend development, including HTML, CSS, and Javascript. He will be helping with the user interface design and responsible for managing the database. Lastly, he will also be writing the test cases to make sure the system functions as set out.
+
 ####3.1.2 Hardware and Software Resources
 
+The follosing is neccessary to the development of this project:
+
+**Hardware:**
+* Machine for hosting, provided by FIU
+* Personal computer with at least 2.0 GHz processor
+* 4 GB of RAM
+* At least 4 GB of free hard disk space
+
+**Software:**
+* Linux or Mac Operating System
+* PyCharm or similar IDE
+* Python 2.7
+* Django 1.7 
+* Text Editor (OpenOffice, Gedit, etc.)
+
 ###3.2 Identification of Tasks, Milestones, and Deliverables
+Milestone | Description | Date
+-----------|-------------|-----
+1 | Feasibilty and Project Plan, Requirements Document | February 1
+2 | Design Document | April 22
+3 | Final Deliverable | April 30
 
 
 ######[top](#deliverable-1---feasibility-study-and-project-plan)
