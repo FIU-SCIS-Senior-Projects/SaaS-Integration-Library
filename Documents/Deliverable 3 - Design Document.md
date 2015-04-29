@@ -172,15 +172,22 @@ The following are sequence diagrams relating to the user stories captured to be 
 
 ###3.4 Code Specification
 
+The Templates subsystem will contain multiple simple html files. The files which pertain to call responses will have javascript in them to render the datables libary. The filtering on the get all cards call will contain further javascript for re-rendering the datatables after a metric filter has been selected.
+
+The Vies subsytem has multiple methods, including index(request), datasource(request), confirmation(request, api_name), datasets(request), api(request, api_cred), and apicall(request, api_cred, action_name).
+
+Within the APIs subsystem the Trello class will be used to get data from Trello. This class will need to be passed a user token. For a list of all the methods within this class refer to the [Class Diagram](#32-static-model) above.
 
 ######[top](#deliverable-3---design-document)
 -------
 
 ##4. Glossary
 
+**django**: Web framework that is open source. Follows similar style to model-view-controller, except the framework become the controller. Architectual pattern is called model-view-template, with template relating to view in MVC.
+
 **python**: General purpose language. Highly readable code that is not very verbose. Has dynamic typing. 
 
-**django**: Web framework that is open source. Follows similar style to model-view-controller, except the framework become the controller. Architectual pattern is called model-view-template, with template relating to view in MVC.
+**RDBMS**: Relational Database Management System.
 
 **SaaS**: Software-as-a-Service is defined as a software licensing model that is subscription based. It enables a user to have access to some business application that they can use for their own unique purposes.
 
@@ -303,6 +310,13 @@ Step 3: The system reloads the table
 
 ###5.3 Appendix C - Class Interfaces 
 
+**Code for Views subsystem**:
+
+'''
+def index(request)
+
+def datasource(request):
+'''
 
 
 ###5.4 Appendix D - Diary of Meetings and Tasks

@@ -187,9 +187,12 @@ See [Appendix D](#64-appendix-d---dynamic-uml-diagrams) for the sequence diagram
 -------
 
 ##5. Glossary
-**python**: General purpose language. Highly readable code that is not very verbose. Has dynamic typing. 
 
 **django**: Web framework that is open source. Follows similar style to model-view-controller, except the framework become the controller. Architectual pattern is called model-view-template, with template relating to view in MVC.
+
+**python**: General purpose language. Highly readable code that is not very verbose. Has dynamic typing. 
+
+**RDBMS**: Relational Database Management System.
 
 **SaaS**: Software-as-a-Service is defined as a software licensing model that is subscription based. It enables a user to have access to some business application that they can use for their own unique purposes.
 
