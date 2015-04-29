@@ -118,7 +118,7 @@ The system has three main components. The host which contains the webserver, tem
 
 **Structure of Data**
 
-![Data Management](images/databasemodels.jpg?raw=true)
+![Data Management](images/databasemodels.png?raw=true)
 
 This data is stored on the SQLite RDBMS within Django. The above code is the model that is used to create the tables and attributes. As can be seen the Api class contains only a name and calls field. The ApiCredential class has a name, settings, and api foreign key. Finally the Call class has a foreign key to an api, a name field, and a response field.
 
@@ -135,9 +135,40 @@ In terms of privacy, on a basic level the project will have only one user that h
 
 ###3.1 Overview
 
+The Templates subsystem will deal with how the website looks and reacts. This will be handled by the various template html documents. They will handle how the pages look and if any data is passed to the page, whether or not to show it.
+
+The Views subsystem is the behind the scenes operator for being able to deal with multiple third-party APIs. This decides what information should be passed to the Tempalates subsystem by recieving queries and reaching out to the APIs subsystem and SQLite RDBMS subsystems.
+
+The APIs subsystem contains the logic for a given third-party API. The main focus for this semester was the Trello API. This will handle the details of making the call, cleaning the response, and deciding what will be available to the Views subsystem.
+
+The SQLite RDBMS subsystem will contain the data that is retrieved from the APIs subsystem. The Views subsystem will be relaying the data retrieved from the APIs subsystem to the SQLite RDBMS as well as reading from the storage when needed from the Templates subsystem.
+
+
 ###3.2 Static Model
 
+**Class Diagram**
+![Image of Class Diagram](images/TrelloApiClassDiagram.jpg?raw=true)
+
+
 ###3.3 Dynamic Model
+
+The following are sequence diagrams relating to the user stories captured to be fulfilled by the system design.
+
+**Get Data Source Sequence Diagram**
+![Image of Get Data Source Sequence Diagram](images/GetDataSourceSequence.jpg?raw=true)
+
+**View Data Source Sequence Diagram**
+![Image of View Data Source Sequence Diagram](images/CreateDataSourceSequence.jpg?raw=true)
+
+**Get My Cards Sequence Diagram**
+![Image of Get My Cards Sequence Diagram](images/FilterGetMyCards.jpg?raw=true)
+
+**Get Due in Seven Sequence Diagram**
+![Image of Get Due in Seven Sequence Diagram](images/FilterGetDueinSevenCards.jpg?raw=true)
+
+**Get Past Due Sequence Diagram**
+![Image of Get Past Due Sequence Diagram](images/FilterGetPastDueCards.jpg?raw=true)
+
 
 ###3.4 Code Specification
 
