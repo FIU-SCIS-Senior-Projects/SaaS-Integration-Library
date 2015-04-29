@@ -52,13 +52,13 @@ The following design document lays out the problem the project is attempting to 
 
 5. [Appendix](#5-appendix)
 
-  5.1 [Appendix A](#61-appendix-a---use-case-diagram)
+  5.1 [Appendix A](#51-appendix-a---use-case-diagram)
 
-  5.2 [Appendix B](#62-appendix-b---use-cases)
+  5.2 [Appendix B](#52-appendix-b---use-cases)
 
-  5.3 [Appendix C](#63-appendix-c---class-interfaces)
+  5.3 [Appendix C](#53-appendix-c---class-interfaces)
 
-  5.4 [Appendix D](#64-appendix-d---diary-of-meetings-and-tasks)
+  5.4 [Appendix D](#54-appendix-d---diary-of-meetings-and-tasks)
 
 6. [References](#6-references)
 
