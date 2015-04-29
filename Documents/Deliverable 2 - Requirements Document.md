@@ -319,19 +319,26 @@ Step 3: The system reloads the table
 
 ###6.5 Appendix E - User Interface Designs
 
+**Image of Index UI**
 ![Image of Index UI](images/IndexUI.png?raw=true)
 
+**Image of Datasource UI**
 ![Image of Datasource UI](images/DatasourceUI.png?raw=true)
 
+**Image of Datasets UI**
 ![Image of Datasets UI](images/DatasetsUI.png?raw=true)
 
+**Image of Trello Calls UI**
 ![Image of Trello Calls UI](images/TrelloCallsUI.png?raw=true)
 
+**Image of Get All Cards UI**
 ![Image of Get All Cards UI](images/GetAllCardsUI.png?raw=true)
 
-![Image of Get All Boards UI](images/GetAllBoardsUI.png?raw=true)
-
+**Image of Get My Cards UI**
 ![Image of Get My Cards UI](images/FilterMyCardsUI.png?raw=true)
+
+**Image of Get All Boards UI**
+![Image of Get All Boards UI](images/GetAllBoardsUI.png?raw=true)
 
 ###6.6 Appendix F - Diary of Meetings and Tasks
 	
