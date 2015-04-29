@@ -87,6 +87,8 @@ This document dives into the system design first via chapter 2. That chapter cov
 
 ##2. System Design
 
+The following sections give an overview of the system design by showing the subsystem decomposition, the hardware and software mappings, the persistent data management, and the security and privacy designs.
+
 ###2.1 Overview
 The main architecture for the system will be coming from the Django framework which uses a variation on Model-View-Controller. Namely it does away with controller and uses a Model-View-Template architecture. There is some discussion as to whether the framework itself acts as a controller with url mappings and such. Behind the scenes there will be some pipe and filter architecture for the various APIs and the calls they allow. As well as the client portion of the server-client architecture with the third party APIs.
 
@@ -106,8 +108,19 @@ The SQLite RDBMS subsystem will contain the data that is retrieved from the APIs
 
 ###2.3 Hardware and Software Mapping
 
+**Deployment Diagram**
+
+![Deployment Diagram](images/DeploymentDiagram.jpg?raw=true)
+
+The system has three main components. The host which contains the webserver, templates, views, models, and database, the client pc which reaches out to the host, and the third party API host that our host reaches out to for data retrieval.
+
 ###2.4 Persistent Data Management
-![Data Management](images/DataManagement.jpg?raw=true)
+
+**Structure of Data**
+
+![Data Management](images/databasemodels.jpg?raw=true)
+
+This data is stored on the SQLite RDBMS within Django. The above code is the model that is used to create the tables and attributes. As can be seen the Api class contains only a name and calls field. The ApiCredential class has a name, settings, and api foreign key. Finally the Call class has a foreign key to an api, a name field, and a response field.
 
 ###2.5 Security and Privacy
 Django comes with great security features available out of the box. This includes cross site scripting protection, cross site request forgery protection, SQL injection protection, session security, and others.
