@@ -11,6 +11,7 @@
 
 ##Abstract
 
+The following design document lays out the problem the project is attempting to solve and the design intended to address that problem. The document gives an overview of the subsystem decomposition along with the data management, security and privacy features, and hardware mappings. The document also gives some code specifications in regards to the above and the static and dynamic models.
 
 -------
 
@@ -63,6 +64,8 @@
 -------
 
 ##1. Introduction
+
+This chapter gives a brief introduction to the problem and design methodology used to address it. There is also an overview for the rest of the document and some definitions.
 
 ###1.1 Problem Definition
 
