@@ -312,11 +312,15 @@ Step 3: The system reloads the table
 
 **Code for Views subsystem**:
 
-'''
-def index(request)
+```
+def index(request){
 
-def datasource(request):
-'''
+}
+
+def datasource(request){
+
+}
+```
 
 
 ###5.4 Appendix D - Diary of Meetings and Tasks
