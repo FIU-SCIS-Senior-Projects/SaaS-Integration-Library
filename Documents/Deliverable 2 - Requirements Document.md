@@ -10,6 +10,7 @@
 
 ##Abstract
 
+The following requirements document gives an introction to the problem this project is attempting to solve. That is followed by the state of the current system and a project plan to show the work breakdown and cost estimate. Finally the Requirements are introduced along with diagrams showing the sequence of events for those cases and some user interface designs.
 
 -------
 
@@ -155,32 +156,37 @@ This chapter discusses the requirements asked for by the product owner and perfo
 ###4.2 Analysis of System Requirements
 
 ####4.2.1 Scenarios
+The following are various scenarios that may take place on the project.
+
+* A user arrives at the homepage and wants to get started. The user should click on the link which directs him/her to add a datasource.
+
+* A user wants to add his/her Trello datasource to the application and is on the datasource page. S/he clicks the link for Trello and follows Trello's instructions to allow the application to have access. After, the user is redirected to a confirmation pages showing him/her where to find the dataset.
+
+* A user wants to make a Trello API call. The user navigates to his/her dataset and selects one of the links to make a call (Get all cards, Get all Boards, Get Labels, Get Members, Get Lists). After selecting the call, the system displays the output from the call in a table.
+
+* A user wants to filter the get all cards call. Along the top of the page the user may select "My Cards", "Due in Seven", "Past Due", or "Total Cards". The metrics remain at the top so navigation is possible through each.
+
 
 ####4.2.2 Use Case Model
+
 ![Image of Use Case Diagram](images/SILUseCaseDiagram.png?raw=true)
 
 ####4.2.3 Static Model
+
 ![Image of Trello Class Diagram](images/TrelloApiClassDiagram.jpg?raw=true)
 
 ####4.2.4 Dynamic Model
-![Image of Get Data Source Sequence Diagram](images/GetDataSourceSequence.jpg?raw=true)
 
-![Image of View Data Source Sequence Diagram](images/CreateDataSourceSequence.jpg?raw=true)
-
-![Image of Get My Cards Sequence Diagram](images/FilterGetMyCards.jpg?raw=true)
-
-![Image of Get Due in Seven Sequence Diagram](images/FilterGetDueinSevenCards.jpg?raw=true)
-
-![Image of Get Past Due Sequence Diagram](images/FilterGetPastDueCards.jpg?raw=true)
+See [Appendix D](#64-appendix-d---dynamic-uml-diagrams) for the sequence diagrams. There are five diagrams that represent the sequence of events within and on the system that take place for a given user story.
 
 
 ######[top](#deliverable-2---requirements-document)
 -------
 
 ##5. Glossary
-**python**
+**python**: General purpose language. Highly readable code that is not very verbose. Has dynamic typing. 
 
-**django**
+**django**: Web framework that is open source. Follows similar style to model-view-controller, except the framework become the controller. Architectual pattern is called model-view-template, with template relating to view in MVC.
 
 **SaaS**: Software-as-a-Service is defined as a software licensing model that is subscription based. It enables a user to have access to some business application that they can use for their own unique purposes.
 
