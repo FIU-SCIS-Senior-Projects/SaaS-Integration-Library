@@ -313,13 +313,39 @@ Step 3: The system reloads the table
 **Code for Views subsystem**:
 
 ```
-def index(request){
+def index(request)
 
-}
+def datasource(request)
 
-def datasource(request){
+def confirmation(request, api_name)
 
-}
+def datasets(request)
+
+def api(request, api_cred)
+
+def apicall(request, api_cred, action_name)
+```
+
+**Code for Trello class**:
+
+```
+def __init__(self, token)
+
+def make_call(self, address)
+
+def get_records(self)
+
+def get_all_boards(self)
+
+def get_board(self, id)
+
+def get_all_cards(self)
+
+def get_lists(self)
+
+def get_labels(self)
+
+def get_members(self)
 ```
 
 
