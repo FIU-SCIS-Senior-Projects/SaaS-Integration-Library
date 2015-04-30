@@ -34,6 +34,16 @@ The following is neccessary to the development of this project:
 
 ##Installation and Setup
 
+This application requires python 2.7, which is included on any linux machine. If the local system you are using does not have python make sure to obtain it.
+
+Also, to get all the requirements installed we have included a piprequirements.txt file that will install the libraries needed using pip. Install pip via http://pip.readthedocs.org/en/latest/installing.html.
+
+It also requires Django version 1.7.
+
+Once python and pip are installed make sure you also have git. Then clone this repository "git clone git@github.com:FIU-SCIS-Senior-Project-2015-Spring/SaaS-Integration-Library.git". 
+
+After obtaining the repository navigate to /SaaS-Integration-Library/Code/Website/SaaS_Integration_Library and then run "sudo pip install -r piprequirements.txt". You now have all the required libraries!
+
 In order to get the project up and running the current method is using Django's runserver command. Inside the terminal for the develop environment go to /SaaS-Integration-Library/Code/Website/SaaS_Integration_Library then type "python manage.py runserver 131.94.128.118:5555".
 
 This will run the web application at the given address and can be access via any browser at http://131.94.128.118:5555/SIL.
@@ -41,21 +51,27 @@ This will run the web application at the given address and can be access via any
 This is covered in more detail in the Installation and Design document
 
 
-User Interface Images
+##Getting Started
 
-![Image of Home Page](images/HomePage.png?raw=true)
-__
+From the main page selet the Datasources link:
 
-![Image of Create DataSource Page](images/CreateDatasourcePage.png?raw=true)
-__
+**Image of Index UI**
+![Image of Index UI](images/IndexUI.png?raw=true)
 
-![Image of Datasets Page](images/DatasetsPage.png?raw=true)
-__
+On the next page you can select Trello to add a datasource:
 
-![Image of Trello Calls Page](images/TrelloCallsPage.png?raw=true)
-__
+**Image of Datasource UI**
+![Image of Datasource UI](images/DatasourceUI.png?raw=true)
 
-![Image of Trello Get Members Call Page](images/TrelloGetMembersCallPage.png?raw=true)
+After submitting your information and be redirected to a confirmation page you can selec the datasets link:
+
+**Image of Datasets UI**
+![Image of Datasets UI](images/DatasetsUI.png?raw=true)
+
+From here you can select the dataset you just added (should be Trello "username") in order to make calls on that dataset:
+
+**Image of Trello Calls UI**
+![Image of Trello Calls UI](images/TrelloCallsUI.png?raw=true)
 
 
 **References:**
