@@ -5,7 +5,7 @@ from django.shortcuts import render_to_response
 import simplejson
 
 import sys
-sys.path.append("/home/adam/")
+sys.path.append("/opt/users/ameri012")
 from senior import secret
 import datetime
 
