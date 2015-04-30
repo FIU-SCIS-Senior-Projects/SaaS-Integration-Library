@@ -7,6 +7,12 @@ Once python and pip are installed make sure you also have git. Then clone this r
 
 After obtaining the repository navigate to /SaaS-Integration-Library/Code/Website/SaaS_Integration_Library and then run "sudo pip install -r piprequirements.txt". You now have all the required libraries!
 
+To get the app running navigate to /SaaS-Integration-Library/Code/Website/SaaS_Integration_Library and type "python manage.py runserver". This will run the application on your localhost and will be viewable if you go to "http://127.0.0.1:8000/SIL/" in your browser.
+
+![Image of runserverlocal](images/runserverlocal.png?raw=true)
+
+![Image of runserverlocalrunning](images/runserverlocalrunning.png?raw=true)
+
 Working on the remote server:
 
 1. At the command line "ssh  ameri012@sil-dev.cis.fiu.edu"
@@ -23,8 +29,17 @@ Working on the remote server:
 
 ![Image of in screen](images/screenedIn.png?raw=true)
 
+![Image of exit remote](images/sshexit?raw=true)
+
 You are now where the remote server is running. To stop the runserver process of Django do "Ctrl+c". If you are going to exit the remote server but want to keep the django runserver option going then press "Ctrl+a" then press "d". You are now detached from the screen and can "exit" the ssh safely while the runserver process is still running.
 
+To run on the remote server do the same as the localhost version but with the IP address added. So you would type "python manage.py runserver 131.94.128.118:555".
+
+![Image of runserverremote](images/runserverremote.png?raw=true)
+
+If you are wondering about that IP address it was obtained by running the "ifconfig" command on the remote server.
+
+![Image of remote ifconfig](images/remoteifconfig.png?raw=true)
 
 To access the database got to http://131.94.128.118:5555/admin/ and enter the log in credentials
 username: siladmin
