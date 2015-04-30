@@ -19,7 +19,7 @@ Lines 8 and 9 will have to be changed with your directory name and with your fil
 
 ![Image of Trello secret folder](images/TrelloSecretlocation.png?raw=true)
 
-__init__.py is empty but needed for python and secret.py contains only ' TRELLO_KEY = "<key here>" '
+__init__.py is empty but needed for python and secret.py contains only ' TRELLO_KEY = "key here" '
 
 To get the app running navigate to /SaaS-Integration-Library/Code/Website/SaaS_Integration_Library and type "python manage.py runserver". This will run the application on your localhost and will be viewable if you go to "http://127.0.0.1:8000/SIL/" in your browser.
 
