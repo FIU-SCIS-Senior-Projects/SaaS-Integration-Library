@@ -252,7 +252,7 @@ Adam Merille will be responsible for everything for this first version. He will 
 
 ####3.1.2 Hardware and Software Resources
 
-The follosing is neccessary to the development of this project:
+The following is neccessary to the development of this project:
 
 **Hardware:**
 * Machine for hosting, provided by FIU
