@@ -1,11 +1,24 @@
 
-This application requires python, which is included on any linux machine. If the local system you are using does not have python make sure to obtain it.
+This application requires python 2.7, which is included on any linux machine. If the local system you are using does not have python make sure to obtain it.
 
 Also, to get all the requirements installed we have included a piprequirements.txt file that will install the libraries needed using pip. Install pip via http://pip.readthedocs.org/en/latest/installing.html.
+
+It also requires Django version 1.7.
 
 Once python and pip are installed make sure you also have git. Then clone this repository "git clone git@github.com:FIU-SCIS-Senior-Project-2015-Spring/SaaS-Integration-Library.git". 
 
 After obtaining the repository navigate to /SaaS-Integration-Library/Code/Website/SaaS_Integration_Library and then run "sudo pip install -r piprequirements.txt". You now have all the required libraries!
+
+**Note:**
+
+In order to give some security I stored the Trello Developer Key in a separate folder outside of git. So there is a line of code that will have to be changed for you when you create it.
+
+![Image of Code to change location](images/Secretlocation.png?raw=true)
+Lines 8 and 9 will have to be changed with your directory name and with your file names.
+
+![Image of Trello secret folder](images/TrelloSecretlocation.png?raw=true)
+
+__init__.py is empty but needed for python and secret.py contains only 'TRELLO_KEY = "<key here>"'
 
 To get the app running navigate to /SaaS-Integration-Library/Code/Website/SaaS_Integration_Library and type "python manage.py runserver". This will run the application on your localhost and will be viewable if you go to "http://127.0.0.1:8000/SIL/" in your browser.
 
@@ -50,3 +63,6 @@ password: sildata
 Once logged in you may now navigate the database.
 
 ![Image of in admin dashboard](images/adminloggedin.png?raw=true)
+
+**Resources:**
+* Tango With Django 1.7: http://www.tangowithdjango.com/book17/, great resource for learning the Django framework.
