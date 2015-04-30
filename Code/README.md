@@ -1,3 +1,9 @@
+###Directory Structure:
+The Website directory contains the SaaS_Integration_Library Django project directory. Inside there there are two main directories. The Saas_Integration_library in there is the source for the project, while the SIL directory is the application for the website. In this fashion multiple applications can be housed under the SaaS_Integration_Library Django project.
+
+Within that folder there is also the api directory which stores the Trello class logic and the test code for it. The static folder contains images along with javascript and css. The templates folder contains the html documents for browser rendering.
+
+
 ####Current linux development virtual machine credentials:
 Name: sil-dev.cis.fiu.edu
 
