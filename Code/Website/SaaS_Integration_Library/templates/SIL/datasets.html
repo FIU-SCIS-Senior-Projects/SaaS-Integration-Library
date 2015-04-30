@@ -1,0 +1,17 @@
+{% extends 'SIL/base.html' %}
+
+{% block title %}Datasets{% endblock %}
+
+{% block body_block %}
+    <div class="hero-unit">
+        <h2>Datasets</h2>
+        <br>
+        <!--<button class="btn btn-primary" type="submit">Add Dataset</button>-->
+        <!--<br><br>-->
+        <ul>
+            {% for k,v in datasets.items %}
+            <li><a href="/SIL/api/{{ v }}"> {{ k}} </a> </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

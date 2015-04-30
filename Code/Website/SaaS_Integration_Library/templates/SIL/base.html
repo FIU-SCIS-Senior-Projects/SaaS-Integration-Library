@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap -->
+        <link href="{% static 'css-bootstrap/bootstrap-fluid-adj.css' %}" rel="stylesheet">
+        <link href="{% static 'css-bootstrap/bootstrap.css' %}" rel="stylesheet" media="screen">
+        <link href="{% static 'css-bootstrap/bootstrap-responsive.css' %}" rel="stylesheet">
+
+        <!-- Main css -->
+        <link href="{% static 'css/main.css' %}" rel="stylesheet">
+
+        <!-- jQuery -->
+        <script type="text/javascript" charset="utf8" src="{% static '/static/DataTables-1.10.5/media/js/jquery.js' %}"></script>
+
+        {% block head_block %}
+        {% endblock %}
+
+        <title>SaaS Integration Library - {% block title%} API Explorer {% endblock %}</title>
+    </head>
+
+    <body>
+        <div class="navbar navbar-fixed-top">
+           <div class="navbar-inner">
+               <div class="container pull-left">
+                   <a class="brand" href="/SIL/"> <img style="PADDING-LEFT: 15px" src="{% static "brightgaugelogo.png" %}" alt="BrightGauge Logo" /> </a>
+                   <button type="button" class="btn btn-navbar pull-right" data-toggle="collapse" data-target=".nav-collapse">
+                   </button>
+
+                   <div class="nav-collapse collapse">
+                       <ul class="navbar nav navbar-nav">
+                           <li><a style="color: white" href="/SIL/api">Datasets</a></li>
+                           <li><a style="color: white" href="/SIL/datasource">Datasources</a></li>
+                       </ul>
+                   </div>
+                   <!--/.nav-collapse -->
+               </div>
+           </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                     <!-- Page specific content goes here -->
+                    {% block body_block %}
+                    {% endblock %}
+            </div>
+            <!--/row-->
+        </div>
+        <!--/.fluid-container-->
+
+        <div class="footer" >
+            <div class="container pull-left">
+                <p>&copy; SaaS Integration Library: API Explorer</p>
+            </div>
+        </div>
+
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    </body>
+</html>

@@ -1,0 +1,168 @@
+{% extends 'SIL/base.html' %}
+
+{% load static%}
+{%block head_block%}
+
+<!-- DataTables CSS -->
+<link rel="stylesheet" type="text/css" href="{% static '/static/DataTables-1.10.5/media/css/jquery.dataTables.css' %}">
+<!-- DataTables -->
+<script type="text/javascript" charset="utf8" src="{% static '/static/DataTables-1.10.5/media/js/jquery.dataTables.js' %}"></script>
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $('table').dataTable({
+         "scrollX": true,
+          "scrollY": '500px'
+         });
+         $('.metrics > a').on('click', showData);
+    });
+
+    function showData(event){
+        $el=$(event.delegateTarget);
+        id=$el.data('table-id');
+
+        $('div#' + id).removeClass('hide');
+        $("div.table:not('#" + id +"')").addClass('hide');
+    }
+
+</script>
+
+<style>
+    .metrics{
+        margin-left: 5px;
+        margin-bottom: -50%;
+        margin-right:  5px;
+        width: 100%;
+    }
+
+     .boxed {
+        border: 1.5px solid #2D3239;
+        border-radius: 10px;
+        height: 160px;
+
+        max-width: 235px;
+        padding-top: 1%;
+        padding-bottom: 151px;
+        margin-right: 14.2%;
+        margin-bottom: 50px;
+        margin-top: 20px;
+    }
+
+    .boxed-mid-right {
+        padding-top: 1%;
+        padding-bottom: 151px;
+    }
+
+    .boxed-right {
+        margin-right: -1%;
+        float: right;
+        padding-top; 10%;;
+        padding-bottom: 151px;
+    }
+
+    #assigned_text, #due_text, #pastdue_text, #total_cards_text {
+        color: black;
+    }
+    #assigned_count {
+        color:  #22BA48;
+    }
+    #due_count {
+        color:  yellow;
+    }
+    #pastdue_count {
+        color:  red;
+    }
+
+    .hero-unit {
+        margin-top: -3%;
+    }
+</style>
+{% endblock %}
+
+{% block title %}{{ action }}{% endblock %}
+
+{% block body_block %}
+    <div class="hero-unit">
+        {% if action %}
+        <h2>{{ action}}</h2>
+            {% if action_name == 'get_all_cards' %}
+                <div class="row metrics">
+                   <a href="#" id="assigned" data-table-id="mycards">
+                        <div class="span2 boxed">
+                                <h3 id="assigned_text" align="center">Assigned To Me</h3>
+                                <h1 id="assigned_count" align="center">{{ assigned_count }}</h1>
+                        </div>
+                   </a>
+
+                   <a href="#" id="due" data-table-id="due_cards">
+                        <div class="span2 boxed">
+                            <h3 id="due_text" align="center">Due In 7 Days</h3>
+                            <h1 id="due_count" align="center">{{ due_in_seven_count }}</h1>
+                        </div>
+                   </a>
+
+                   <a href="#" id="pastdue" data-table-id="past_due_cards">
+                        <div class="span2 boxed boxed-mid-right">
+                            <h3 id="pastdue_text" align="center">Past Due</h3>
+                            <h1 id="pastdue_count" align="center">{{ past_due_count }}</h1>
+                        </div>
+                   </a>
+
+                    <a href="#" id="total_cards" data-table-id="total">
+                        <div class="span2 boxed boxed-right">
+                            <h3 id="total_cards_text" align="center">Total Cards</h3>
+                            <h1 align="center">{{ total_cards}}</h1>
+                        </div>
+                    </a>
+                </div> <!--/row-->
+            {% endif %}
+        {% else %}
+            <h2>Oops... Call Error</h2>
+        {% endif %}
+
+        {% if call %}
+            <!--{{ response }}-->
+
+            <!--{{ labels }}-->
+        {%  for key,items in card_lists.items %}
+        <div class="table{% if key != 'total' %} hide {% endif %}" id="{{key}}">
+            <table class="table table-striped dataTable display">
+                <thead>
+                    <tr>
+                        {% for label in labels %}
+                        <th> {{label}} </th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in items %}
+                    <tr>
+                        {% for col,data in item.items %}
+                        <td>
+                                {% if 'url' in col or 'Url' in col%}
+                                    <a target='_blank' href="{{data}}">{{data}}</a>
+                                {% else %}
+                                    {{ data }}
+                                {% endif %}
+                        </td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endfor %}
+        {% else %}
+            The specified call {{ action }} did not return anything!
+            <br>
+            <h4>Possible Reasons:</h4>
+            <ul>
+                <li>The Api is misspelled or not created yet </li>
+                <li>The Call returned an error or is not yet set up</li>
+                <li>Something somewhere is down</li>
+            </ul>
+        {% endif %}
+    </div>
+{% endblock %}

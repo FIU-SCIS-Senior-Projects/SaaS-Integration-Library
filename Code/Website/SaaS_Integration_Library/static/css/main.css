@@ -1,0 +1,27 @@
+/*
+ * Main css file
+ */
+
+.nav {
+    color: white;
+    padding-top: 8px;
+}
+
+.navbar-inner, navbar .nav > li > a {
+    background: #2D3239;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.footer {
+    position: fixed;
+    padding-top: 10px;
+    padding-left: 10px;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    color: white;
+    background: #2D3239;
+}
+
+
