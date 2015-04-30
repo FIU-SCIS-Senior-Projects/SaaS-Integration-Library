@@ -29,7 +29,7 @@ Working on the remote server:
 
 ![Image of in screen](images/screenedIn.png?raw=true)
 
-![Image of exit remote](images/sshexit?raw=true)
+![Image of exit remote](images/sshexit.png?raw=true)
 
 You are now where the remote server is running. To stop the runserver process of Django do "Ctrl+c". If you are going to exit the remote server but want to keep the django runserver option going then press "Ctrl+a" then press "d". You are now detached from the screen and can "exit" the ssh safely while the runserver process is still running.
 
