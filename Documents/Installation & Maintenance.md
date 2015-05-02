@@ -11,7 +11,7 @@ After obtaining the repository navigate to /SaaS-Integration-Library/Code/Websit
 
 **Note:**
 
-In order to give some security I stored the Trello Developer Key in a separate folder outside of git. So there is a line of code that will have to be changed for you when you create it.
+In order to give some security I stored the Trello Developer Key in a separate folder outside of git. So there is a line of code that will have to be changed for you when you create it. You will also have to get a Trello Developer Key (see https://trello.com/docs/) to use.
 
 ![Image of Code to change location](images/Secretlocation.png?raw=true)
 
@@ -67,3 +67,4 @@ Once logged in you may now navigate the database.
 
 **Resources:**
 * Tango With Django 1.7: http://www.tangowithdjango.com/book17/, great resource for learning the Django framework.
+* Trello API: https://trello.com/docs/
